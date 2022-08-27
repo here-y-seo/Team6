@@ -12,9 +12,9 @@ class ViewController: UIViewController {
 
     private var helloText: UILabel = {
         let st = UILabel()
-        st.font = .AppleSDGothicNeoBold(ofSize: 10)
+        st.font = .AppleSDGothicNeoBold(ofSize: 13)
         st.text = "하이"
-        st.textColor = .primaryColor
+        st.textColor = .secondaryColor
         return st
     }()
     
