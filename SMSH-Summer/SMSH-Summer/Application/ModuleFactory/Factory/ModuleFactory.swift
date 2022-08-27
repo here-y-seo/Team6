@@ -25,4 +25,9 @@ class ModuleFactory: ModuleFactoryProtocol {
         let vc = ViewController.controllerFromStoryboard(.main)
         return vc
     }
+    
+    func Home() -> HomeViewController {
+        let vc = HomeViewController()
+        return vc
+    }
 }
