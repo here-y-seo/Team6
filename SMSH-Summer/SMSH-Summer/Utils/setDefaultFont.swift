@@ -9,18 +9,9 @@ import Foundation
 import UIKit
 
 struct AppFontName {
-    static let pretendardBold = "Pretendard-Bold"
-    static let pretendardMedium = "Pretendard-Medium"
-    static let pretendardRegular = "Pretendard-Regular"
-
-    static let notoBold = "NotoSansCJKkr-Bold"
-    static let notoMedium = "NotoSansCJKkr-Medium"
-    static let notoRegular = "NotoSansCJKkr-Regular"
-    
-    static let GodoB = "GodoB"
-    
     static let appleSDGothicNeoBold = "AppleSDGothicNeo-Bold"
     static let appleSDGothicNeoMedium = "AppleSDGothicNeo-Medium"
+    static let appleSDGothicNeoRegular = "AppleSDGothicNeo-Regular"
 }
 
 extension UIFontDescriptor.AttributeName {
@@ -30,53 +21,6 @@ extension UIFontDescriptor.AttributeName {
 extension UIFont {
 
     // MARK: Pretendard Font
-    @nonobjc class func PopBold(size: CGFloat) -> UIFont {
-        return UIFont(name: AppFontName.notoBold, size: size)!
-    }
-
-    @nonobjc class func PretendardBold(size: CGFloat) -> UIFont {
-        return UIFont(name: AppFontName.pretendardBold, size: size)!
-    }
-
-    @nonobjc class func PretendardMedium(size: CGFloat) -> UIFont {
-        return UIFont(name: AppFontName.pretendardMedium, size: size)!
-    }
-
-    @nonobjc class func PretendardRegular(size: CGFloat) -> UIFont {
-        return UIFont(name: AppFontName.pretendardRegular, size: size)!
-    }
-
-    @nonobjc class func PopExtraBold(size: CGFloat) -> UIFont {
-        return UIFont(name: AppFontName.notoMedium, size: size)!
-    }
-    
-    @nonobjc class func NotoMedium(size: CGFloat) -> UIFont {
-        return UIFont(name: AppFontName.notoMedium, size: size)!
-    }
-
-    @nonobjc class func NotoRegular(size: CGFloat) -> UIFont {
-        return UIFont(name: AppFontName.notoRegular, size: size)!
-    }
-
-    @nonobjc class func NotoBold(size: CGFloat) -> UIFont {
-        return UIFont(name: AppFontName.notoBold, size: size)!
-    }
-    
-    @objc class func myRegularSystemFont(ofSize size: CGFloat) -> UIFont {
-        return UIFont(name: AppFontName.pretendardRegular, size: size)!
-    }
-
-    @objc class func myBoldSystemFont(ofSize size: CGFloat) -> UIFont {
-        return UIFont(name: AppFontName.pretendardBold, size: size)!
-    }
-
-    @objc class func myMediumSystemFont(ofSize size: CGFloat) -> UIFont {
-        return UIFont(name: AppFontName.pretendardMedium, size: size)!
-    }
-    
-    @objc class func GodoB(ofSize size: CGFloat) -> UIFont {
-        return UIFont(name: AppFontName.GodoB, size: size)!
-    }
     
     @objc class func AppleSDGothicNeoBold(ofSize size: CGFloat) -> UIFont {
         return UIFont(name: AppFontName.appleSDGothicNeoBold, size: size)!
@@ -85,6 +29,10 @@ extension UIFont {
     @objc class func AppleSDGothicNeoMedium(ofSize size: CGFloat) -> UIFont {
         return UIFont(name: AppFontName.appleSDGothicNeoMedium, size: size)!
     }
+    
+    @objc class func AppleSDGothicNeoRegular(ofSize size: CGFloat) -> UIFont {
+        return UIFont(name: AppFontName.appleSDGothicNeoRegular, size: size)!
+    }
 
     @objc convenience init(myCoder aDecoder: NSCoder) {
         if let fontDescriptor = aDecoder.decodeObject(forKey: "UIFontDescriptor") as? UIFontDescriptor {
@@ -92,13 +40,13 @@ extension UIFont {
                 var fontName = ""
                 switch fontAttribute {
                 case "CTFontRegularUsage":
-                    fontName = AppFontName.pretendardRegular
+                    fontName = AppFontName.appleSDGothicNeoRegular
                 case "CTFontEmphasizedUsage", "CTFontBoldUsage":
-                    fontName = AppFontName.pretendardBold
+                    fontName = AppFontName.appleSDGothicNeoBold
                 case "CTFontObliqueUsage":
-                    fontName = AppFontName.pretendardMedium
+                    fontName = AppFontName.appleSDGothicNeoMedium
                 default:
-                    fontName = AppFontName.pretendardRegular
+                    fontName = AppFontName.appleSDGothicNeoRegular
                 }
                 self.init(name: fontName, size: fontDescriptor.pointSize)!
             } else {
@@ -112,11 +60,11 @@ extension UIFont {
      class func overrideInitialize() {
         if self == UIFont.self {
            let systemFontMethod = class_getClassMethod(self, #selector(systemFont(ofSize:)))
-           let mySystemFontMethod = class_getClassMethod(self, #selector(myRegularSystemFont(ofSize:)))
+           let mySystemFontMethod = class_getClassMethod(self, #selector(AppleSDGothicNeoRegular(ofSize:)))
            method_exchangeImplementations(systemFontMethod!, mySystemFontMethod!)
 
            let boldSystemFontMethod = class_getClassMethod(self, #selector(boldSystemFont(ofSize:)))
-           let myBoldSystemFontMethod = class_getClassMethod(self, #selector(myBoldSystemFont(ofSize:)))
+           let myBoldSystemFontMethod = class_getClassMethod(self, #selector(AppleSDGothicNeoBold(ofSize:)))
            method_exchangeImplementations(boldSystemFontMethod!, myBoldSystemFontMethod!)
            let initCoderMethod = class_getInstanceMethod(self, #selector(UIFontDescriptor.init(coder:)))
            let myInitCoderMethod = class_getInstanceMethod(self, #selector(UIFont.init(myCoder:)))
