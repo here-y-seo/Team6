@@ -6,5 +6,8 @@ target 'SMSH-Summer' do
   use_frameworks!
 
   # Pods for SMSH-Summer
+  pod 'SnapKit', '~> 5.0.0'
+  pod 'RealmSwift', '~>10'
+  pod 'Kingfisher', '~> 7.0'
   pod 'NMapsMap','3.15.0'
 end
