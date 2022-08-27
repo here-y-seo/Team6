@@ -22,6 +22,9 @@
 		3BE8A0F028BA3D2400C09CC1 /* UITextFeild+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8A0E328BA3D2400C09CC1 /* UITextFeild+.swift */; };
 		3BE8A0F128BA3D2400C09CC1 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8A0E528BA3D2400C09CC1 /* UIColor+.swift */; };
 		3BE8A0F228BA3D2400C09CC1 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8A0E628BA3D2400C09CC1 /* String+.swift */; };
+		3BE8A0F728BA6F9A00C09CC1 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE8A0F628BA6F9A00C09CC1 /* Splash.storyboard */; };
+		3BE8A0F928BA6FBA00C09CC1 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8A0F828BA6FBA00C09CC1 /* SplashVC.swift */; };
+		3BE8A0FB28BA728600C09CC1 /* Ghanachocolate.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3BE8A0FA28BA728600C09CC1 /* Ghanachocolate.otf */; };
 		3BFB183B28BA0F09008D58F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB183A28BA0F09008D58F0 /* AppDelegate.swift */; };
 		3BFB183D28BA0F09008D58F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB183C28BA0F09008D58F0 /* SceneDelegate.swift */; };
 		3BFB183F28BA0F09008D58F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB183E28BA0F09008D58F0 /* ViewController.swift */; };
@@ -59,6 +62,9 @@
 		3BE8A0E328BA3D2400C09CC1 /* UITextFeild+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextFeild+.swift"; sourceTree = "<group>"; };
 		3BE8A0E528BA3D2400C09CC1 /* UIColor+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		3BE8A0E628BA3D2400C09CC1 /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		3BE8A0F628BA6F9A00C09CC1 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		3BE8A0F828BA6FBA00C09CC1 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		3BE8A0FA28BA728600C09CC1 /* Ghanachocolate.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ghanachocolate.otf; sourceTree = "<group>"; };
 		3BFB183728BA0F09008D58F0 /* SMSH-Summer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SMSH-Summer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BFB183A28BA0F09008D58F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BFB183C28BA0F09008D58F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +163,31 @@
 			path = Design;
 			sourceTree = "<group>";
 		};
+		3BE8A0F328BA6F7B00C09CC1 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				3BE8A0F528BA6F8A00C09CC1 /* VC */,
+				3BE8A0F428BA6F8500C09CC1 /* Views */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		3BE8A0F428BA6F8500C09CC1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3BE8A0F628BA6F9A00C09CC1 /* Splash.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3BE8A0F528BA6F8A00C09CC1 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				3BE8A0F828BA6FBA00C09CC1 /* SplashVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 		3BFB182E28BA0F09008D58F0 = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +254,7 @@
 		3BFB185328BA0F80008D58F0 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				3BE8A0FA28BA728600C09CC1 /* Ghanachocolate.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -256,6 +288,7 @@
 		3BFB187F28BA0F9A008D58F0 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				3BE8A0F328BA6F7B00C09CC1 /* Splash */,
 				3BFB189628BA0FF7008D58F0 /* Main */,
 			);
 			path = Presentation;
@@ -379,6 +412,8 @@
 				3BFB184728BA0F0A008D58F0 /* LaunchScreen.storyboard in Resources */,
 				3BFB186C28BA0F80008D58F0 /* Colors.xcassets in Resources */,
 				3BFB184228BA0F09008D58F0 /* Main.storyboard in Resources */,
+				3BE8A0F728BA6F9A00C09CC1 /* Splash.storyboard in Resources */,
+				3BE8A0FB28BA728600C09CC1 /* Ghanachocolate.otf in Resources */,
 				3BFB186D28BA0F80008D58F0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +478,7 @@
 				3BE8A0ED28BA3D2400C09CC1 /* UIButton+.swift in Sources */,
 				3BFB183B28BA0F09008D58F0 /* AppDelegate.swift in Sources */,
 				3BE8A0D728BA386200C09CC1 /* controllerFromStoryBoard.swift in Sources */,
+				3BE8A0F928BA6FBA00C09CC1 /* SplashVC.swift in Sources */,
 				3BE8A0EA28BA3D2400C09CC1 /* UIView+.swift in Sources */,
 				3BFB188D28BA0FC2008D58F0 /* setRootViewController.swift in Sources */,
 				3BE8A0F128BA3D2400C09CC1 /* UIColor+.swift in Sources */,

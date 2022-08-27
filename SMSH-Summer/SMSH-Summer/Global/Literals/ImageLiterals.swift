@@ -8,6 +8,9 @@
 import UIKit
 
 struct ImageLiterals {
+    struct Splash {
+        static let splashIcon = UIImage(named: "splashIcon")
+    }
     
     struct Common {
         static let starIcon = UIImage(named: "btn_star_01")

@@ -5,7 +5,9 @@
 	<key>NMFClientId</key>
 	<string>4bvivlu76q</string>
 	<key>UIAppFonts</key>
-	<array/>
+	<array>
+		<string>Ghanachocolate.otf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

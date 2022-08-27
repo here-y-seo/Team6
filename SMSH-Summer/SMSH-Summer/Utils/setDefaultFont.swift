@@ -12,6 +12,7 @@ struct AppFontName {
     static let appleSDGothicNeoBold = "AppleSDGothicNeo-Bold"
     static let appleSDGothicNeoMedium = "AppleSDGothicNeo-Medium"
     static let appleSDGothicNeoRegular = "AppleSDGothicNeo-Regular"
+    static let ghanaRegular = "Ghanachocolate"
 }
 
 extension UIFontDescriptor.AttributeName {
@@ -32,6 +33,10 @@ extension UIFont {
     
     @objc class func AppleSDGothicNeoRegular(ofSize size: CGFloat) -> UIFont {
         return UIFont(name: AppFontName.appleSDGothicNeoRegular, size: size)!
+    }
+    
+    @objc class func GhanaRegular(ofSize size: CGFloat) -> UIFont {
+        return UIFont(name: AppFontName.ghanaRegular, size: size)!
     }
 
     @objc convenience init(myCoder aDecoder: NSCoder) {
