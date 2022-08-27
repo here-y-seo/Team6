@@ -10,4 +10,6 @@ target 'SMSH-Summer' do
   pod 'RealmSwift', '~>10'
   pod 'Kingfisher', '~> 7.0'
   pod 'NMapsMap','3.15.0'
+  pod 'Then'
+  pod 'YPImagePicker'
 end

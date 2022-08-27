@@ -1,34 +1,50 @@
 PODS:
   - Kingfisher (7.3.2)
   - NMapsMap (3.15.0)
+  - PryntTrimmerView (4.0.2)
   - Realm (10.28.6):
     - Realm/Headers (= 10.28.6)
   - Realm/Headers (10.28.6)
   - RealmSwift (10.28.6):
     - Realm (= 10.28.6)
   - SnapKit (5.0.1)
+  - SteviaLayout (4.7.3)
+  - Then (3.0.0)
+  - YPImagePicker (5.2.1):
+    - PryntTrimmerView (= 4.0.2)
+    - SteviaLayout (= 4.7.3)
 
 DEPENDENCIES:
   - Kingfisher (~> 7.0)
   - NMapsMap (= 3.15.0)
   - RealmSwift (~> 10)
   - SnapKit (~> 5.0.0)
+  - Then
+  - YPImagePicker
 
 SPEC REPOS:
   trunk:
     - Kingfisher
     - NMapsMap
+    - PryntTrimmerView
     - Realm
     - RealmSwift
     - SnapKit
+    - SteviaLayout
+    - Then
+    - YPImagePicker
 
 SPEC CHECKSUMS:
   Kingfisher: 0086ad83719761ba9b2cdaf6ef4d5b4878cbae23
   NMapsMap: f151761c088d6516064c59da03ab6503769486e6
+  PryntTrimmerView: 6a43cc90df5d99addeabd33d4ba09b1365322130
   Realm: 9b12f16a14446d7d46a9e36225d0a0332a6ec739
   RealmSwift: 5927726fce21005f43b1fb57c832297a22031bfc
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
+  Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
+  YPImagePicker: f36043210c10b0783034eb1947d6e06e31c461e4
 
-PODFILE CHECKSUM: ec8b7ecb8188bf1aae4e2fc36dceb29d7f2606cb
+PODFILE CHECKSUM: e564397bd4c00a85b472b8cc5f8444428dd4fd09
 
 COCOAPODS: 1.11.3
