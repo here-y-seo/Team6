@@ -52,4 +52,9 @@ class ModuleFactory: ModuleFactoryProtocol {
         let vc = AuthorizationViewController()
         return vc
     }
+    
+    func writeLocationVC() -> WriteLocationVC {
+        let vc = WriteLocationVC()
+        return vc
+    }
 }
