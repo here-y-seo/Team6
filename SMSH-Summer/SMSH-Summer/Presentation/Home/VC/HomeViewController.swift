@@ -6,28 +6,38 @@
 //
 
 import UIKit
+import CoreLocation
+
 import NMapsMap
 import SnapKit
 import Then
 
 class HomeViewController: UIViewController {
     // MARK: - Properties
+    /// Location - 위치관련 처리를 위해 싱글톤 객체 선언
+    let locationManager = CLLocationManager()
     
-    /// 네이버지도
+    /// 네이버지도 관련
     lazy var naverMapView = NMFMapView(frame: view.frame)
+    
+    /// - 기본 좌표 : 숙대
+    var coord = NMGLatLng(lat: 37.545993, lng: 126.964707) {
+        didSet {
+            moveLocationAndMarker()
+        }
+    }
+    
+    
     
     /// 현재 위치 버튼
     lazy var currentLocationButton = UIButton().then {
         $0.setImage(UIImage(named: "icon-current-location-on"), for: .normal)
-        $0.layer.borderWidth = 1
-        $0.layer.borderColor = UIColor.LightGray.cgColor
+
         $0.layer.shadowOpacity = 0.1
         $0.layer.shadowRadius = 12
     }
     
     /// 콜렉션 뷰
-
-    
     lazy var collectionView: UICollectionView = {
 
         let layout = UICollectionViewFlowLayout()
@@ -67,7 +77,79 @@ class HomeViewController: UIViewController {
         
         setLayout()
         setConstraints()
+        locationManager.delegate = self
+        
+        moveLocationAndMarker()
+        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        showRequestLocationServiceAlert()
+    }
+    
+    // MARK: - Naver Map 설정
+    func moveLocationAndMarker() {
+
+        let locationOverlay = naverMapView.locationOverlay
+        locationOverlay.hidden = true
+        locationOverlay.location = coord
+        locationOverlay.icon = NMFOverlayImage(name: "icon-location-overlay")
+
+        
+        let cameraUpdate = NMFCameraUpdate(scrollTo: coord)
+        cameraUpdate.animation = .easeIn
+        naverMapView.moveCamera(cameraUpdate)
+        
+        
+        
+        /// 마커
+        let marker = NMFMarker()
+        marker.iconImage = NMFOverlayImage(name: "icon-animal-mini-marker")
+        marker.captionText = "로드킬 신고"
+        marker.position = NMGLatLng(lat: 37.345993, lng: 126.864707)
+        marker.mapView = naverMapView
+        
+        let marker2 = NMFMarker()
+        marker2.iconImage = NMFOverlayImage(name: "icon-donation-mini-marker")
+        marker2.captionText = "사랑의 열매 모금"
+        marker2.position = NMGLatLng(lat: 37.545993, lng: 126.964707)
+        marker2.mapView = naverMapView
+        
+        let marker3 = NMFMarker()
+        marker3.iconImage = NMFOverlayImage(name: "icon-etc-mini-marker")
+        marker3.captionText = "청소노동자 연대서명"
+        marker3.position = NMGLatLng(lat: 37.4, lng: 126.7)
+        marker3.mapView = naverMapView
+        
+        let marker4 = NMFMarker()
+        marker4.iconImage = NMFOverlayImage(name: "icon-plogging-mini-marker")
+        marker4.captionText = "버정 쓰레기 치우기"
+        marker4.position = NMGLatLng(lat: 37.48, lng: 126.8)
+        marker4.mapView = naverMapView
+        
+
+    }
+    // MARK: - Actions
+    private func setActions() {
+        currentLocationButton.addTarget(self, action: #selector(currentLocationButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func currentLocationButtonTapped(_ sender: UIButton) {
+        
+        /// 상태 따라서 이미지 변경
+        sender.isSelected = !sender.isSelected
+        let image = sender.isSelected ? "icon-current-location-on" :"icon-current-location-off"
+        currentLocationButton.setImage(UIImage(named:image), for: .normal)
+        
+        /// 클릭하면 현재위치 받아오기
+        locationManager.startUpdatingLocation()
+    }
+    
+    
+    // MARK: - UI
+    
     
     
     private func setLayout() {
@@ -142,5 +224,96 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
 }
 
+// MARK: - 위치
+/// 위치  및 위치 권한 관련 메서드 선언
+extension HomeViewController {
 
+    /// - 사용자가 위치서비스 권한이 켜져있는지
+    func checkUserDeviceLocationServiceAuthorization() {
+        /// -  권한상태
+        let authorizationStatus: CLAuthorizationStatus
+        
+        /// - 15.0 이상 배포이므로 따로 iOS 버전에 대한 @available 체크를 하지는 않을 것
+        authorizationStatus = locationManager.authorizationStatus
+        
+        /// - 현재 기기의 위치서비스 활성화 여부 체크
+        if CLLocationManager.locationServicesEnabled() {
+            /// - 위치서비스가 활성화 되어 있을 경우 위치권한 요청
+            checkUserCurrentLocationAuthorization(authorizationStatus)
+        } else {
+            showAlert("위치서비스가 꺼져있습니다.")
+        }
+    }
+    
+    func checkUserCurrentLocationAuthorization(_ authorizationStatus: CLAuthorizationStatus ) {
+        
+        switch authorizationStatus {
+            
+        case .notDetermined:
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestWhenInUseAuthorization()
+            locationManager.startUpdatingLocation()
+            
+        case .restricted, .denied:
+            showRequestLocationServiceAlert()
+
+        case .authorizedAlways, .authorizedWhenInUse:
+            locationManager.startUpdatingLocation()
+            
+        default:
+            print("Default")
+        }
+    }
+    
+    ///  - 설정창에서 위치정보를 키도록 유도
+    func showRequestLocationServiceAlert() {
+        let requestLocationServiceAlert = UIAlertController(title: "위치정보 이용", message: "위치 서비스를 사용할 수 없습니다. '설정 > 개인정보 보호'에서 위치 서비스를 켜주세요.", preferredStyle: .alert)
+        let goSetting = UIAlertAction(title: "설정으로 이동", style: .destructive) { _ in
+            ///-  설정창으로 이동
+            if let appSetting = URL(string: UIApplication.openSettingsURLString) {
+                UIApplication.shared.open(appSetting)
+            }
+        }
+        let cancel = UIAlertAction(title: "취소", style: .default)
+        
+        requestLocationServiceAlert.addAction(cancel)
+        requestLocationServiceAlert.addAction(goSetting)
+        
+        present(requestLocationServiceAlert, animated: true, completion: nil)
+    }
+    
+    /// - 알림 창
+    private func showAlert(_ title: String, buttonTitle: String = "확인") {
+        let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        let ok = UIAlertAction(title: title, style: .default, handler: nil)
+        alert.addAction(ok)
+        self.present(alert, animated: true)
+    }
+    
+}
+/// Location Manager Delegate
+extension HomeViewController: CLLocationManagerDelegate {
+
+    /// - 유저의 위치를 성공적으로 가지고 온 경우
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print(#function, locations)
+        if let location = locations.last?.coordinate as? CLLocationCoordinate2D  {
+            let longitude: CLLocationDegrees = location.longitude
+            let latitude: CLLocationDegrees = location.latitude
+            
+            coord = NMGLatLng(lat: latitude, lng: longitude)
+        
+        }
+        
+        //locationManager.stopUpdatingLocation()
+        
+        
+    }
+
+    /// - 유저의 위치권한 상태가 변경될 때 / 위치 관리자를 생성할 경우
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        checkUserDeviceLocationServiceAuthorization()
+    }
+    
+}
 

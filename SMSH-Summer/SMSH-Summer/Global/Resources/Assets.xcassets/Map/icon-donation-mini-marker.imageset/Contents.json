@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "isActivated=False, Kind=04.png",
+      "filename" : "icon-donation-mini-marker@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "isActivated=False, Kind=04@2x.png",
+      "filename" : "icon-donation-mini-marker@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "isActivated=False, Kind=04@3x.png",
+      "filename" : "icon-donation-mini-marker@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
