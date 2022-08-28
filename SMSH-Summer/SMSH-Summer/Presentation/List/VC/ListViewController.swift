@@ -22,6 +22,9 @@ class ListViewController: UIViewController {
         $0.setImage(UIImage(named: "icon-filter"), for: .normal)
     }
     
+    /// 콜렉션 뷰 데이터
+    var list = GoodDeed.list
+    
     /// 콜렉션 뷰
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -96,6 +99,8 @@ extension ListViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ListCollectionViewCell.identifier, for: indexPath) as? ListCollectionViewCell else { return UICollectionViewCell() }
+        
+        cell.configureData(list[indexPath.item])
         
         return cell
     }
