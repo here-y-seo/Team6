@@ -41,4 +41,9 @@ class ModuleFactory: ModuleFactoryProtocol {
         let vc = ListViewController()
         return vc
     }
+    
+    func AuthorizationVC() -> AuthorizationViewController {
+        let vc = AuthorizationViewController()
+        return vc
+    }
 }
