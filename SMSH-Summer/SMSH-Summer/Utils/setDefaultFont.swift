@@ -12,6 +12,7 @@ struct AppFontName {
     static let appleSDGothicNeoBold = "AppleSDGothicNeo-Bold"
     static let appleSDGothicNeoMedium = "AppleSDGothicNeo-Medium"
     static let appleSDGothicNeoRegular = "AppleSDGothicNeo-Regular"
+    static let appleSDGothicNeoSemiBold = "AppleSDGothicNeo-SemiBold"
     static let ghanaRegular = "Ghanachocolate"
 }
 
@@ -33,6 +34,10 @@ extension UIFont {
     
     @objc class func AppleSDGothicNeoRegular(ofSize size: CGFloat) -> UIFont {
         return UIFont(name: AppFontName.appleSDGothicNeoRegular, size: size)!
+    }
+    
+    @objc class func AppleSDGothicNeoSemiBold(ofSize size: CGFloat) -> UIFont {
+        return UIFont(name: AppFontName.appleSDGothicNeoSemiBold, size: size)!
     }
     
     @objc class func GhanaRegular(ofSize size: CGFloat) -> UIFont {
