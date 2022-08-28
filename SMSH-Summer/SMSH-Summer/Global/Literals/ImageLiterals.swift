@@ -26,6 +26,7 @@ struct ImageLiterals {
         static let plusBtn = UIImage(named: "plusBtn")
         static let deleteBtn = UIImage(named: "deleteBtn")
         static let calendar = UIImage(named: "calendar")
+        static let writeViewLeftBtn = UIImage(named: "writeViewLeftBtn")
     }
     
 }

@@ -18,6 +18,7 @@ import UIKit
 enum Storyboards: String {
     case main = "Main"
     case Splash = "Splash"
+    case WriteView = "WriteView"
 }
 
 extension UIStoryboard {

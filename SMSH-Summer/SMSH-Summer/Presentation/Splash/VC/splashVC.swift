@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Then
 
-class SplashVC: UIViewController {
+class splashVC: UIViewController {
     
     // MARK: - UI Components
     
@@ -39,7 +39,7 @@ class SplashVC: UIViewController {
 
 // MARK: Extension
 
-extension SplashVC {
+extension splashVC {
     private func setLayout() {
         view.addSubviews(splashView)
         splashView.addSubviews(titleLabel, logoImage)
