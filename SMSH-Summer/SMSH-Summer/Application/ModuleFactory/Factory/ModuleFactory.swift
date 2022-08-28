@@ -14,6 +14,7 @@ protocol ModuleFactoryProtocol {
     func VC() -> ViewController
     func SplashVC() -> splashVC
     func WriteVC() -> writeVC
+    func TabBar() -> customTabBar
 }
 
 class ModuleFactory: ModuleFactoryProtocol {
@@ -56,5 +57,10 @@ class ModuleFactory: ModuleFactoryProtocol {
     func writeLocationVC() -> WriteLocationVC {
         let vc = WriteLocationVC()
         return vc
+    }
+    
+    func TabBar() -> customTabBar {
+        let tb = customTabBar.controllerFromStoryboard(.tabBar)
+        return tb
     }
 }

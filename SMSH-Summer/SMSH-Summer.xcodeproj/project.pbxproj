@@ -31,6 +31,10 @@
 		3BE8A0F928BA6FBA00C09CC1 /* splashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8A0F828BA6FBA00C09CC1 /* splashVC.swift */; };
 		3BE8A0FB28BA728600C09CC1 /* Ghanachocolate.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3BE8A0FA28BA728600C09CC1 /* Ghanachocolate.otf */; };
 		3BEFD8A828BB421200011AEB /* typeCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEFD8A728BB421200011AEB /* typeCVC.swift */; };
+		3BEFD8AB28BB65BB00011AEB /* customTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEFD8AA28BB65BB00011AEB /* customTabBar.swift */; };
+		3BEFD8AD28BB65C700011AEB /* tabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEFD8AC28BB65C700011AEB /* tabBar.storyboard */; };
+		3BEFD8AF28BB709900011AEB /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEFD8AE28BB709900011AEB /* Home.storyboard */; };
+		3BEFD8B128BB711100011AEB /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEFD8B028BB711100011AEB /* List.storyboard */; };
 		3BFB183B28BA0F09008D58F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB183A28BA0F09008D58F0 /* AppDelegate.swift */; };
 		3BFB183D28BA0F09008D58F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB183C28BA0F09008D58F0 /* SceneDelegate.swift */; };
 		3BFB183F28BA0F09008D58F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB183E28BA0F09008D58F0 /* ViewController.swift */; };
@@ -83,6 +87,10 @@
 		3BE8A0F828BA6FBA00C09CC1 /* splashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = splashVC.swift; sourceTree = "<group>"; };
 		3BE8A0FA28BA728600C09CC1 /* Ghanachocolate.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ghanachocolate.otf; sourceTree = "<group>"; };
 		3BEFD8A728BB421200011AEB /* typeCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typeCVC.swift; sourceTree = "<group>"; };
+		3BEFD8AA28BB65BB00011AEB /* customTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customTabBar.swift; sourceTree = "<group>"; };
+		3BEFD8AC28BB65C700011AEB /* tabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = tabBar.storyboard; sourceTree = "<group>"; };
+		3BEFD8AE28BB709900011AEB /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		3BEFD8B028BB711100011AEB /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
 		3BFB183728BA0F09008D58F0 /* SMSH-Summer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SMSH-Summer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BFB183A28BA0F09008D58F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BFB183C28BA0F09008D58F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -250,6 +258,15 @@
 			path = CVC;
 			sourceTree = "<group>";
 		};
+		3BEFD8A928BB658600011AEB /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				3BEFD8AA28BB65BB00011AEB /* customTabBar.swift */,
+				3BEFD8AC28BB65C700011AEB /* tabBar.storyboard */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		3BFB182E28BA0F09008D58F0 = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +367,7 @@
 		3BFB187F28BA0F9A008D58F0 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				3BEFD8A928BB658600011AEB /* TabBar */,
 				A216DBEB28BB38FD00B7C9D8 /* Authorization */,
 				A2F7A18028BB077A001BF532 /* List */,
 				3B312B8328BAFE010048AA8D /* WriteView */,
@@ -436,6 +454,7 @@
 			children = (
 				A2F7A18228BB079E001BF532 /* ListViewController.swift */,
 				A2F7A18428BB0EAE001BF532 /* ListCollectionViewCell.swift */,
+				3BEFD8B028BB711100011AEB /* List.storyboard */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -462,6 +481,7 @@
 			children = (
 				A2FD94E728BA76390039E997 /* HomeViewController.swift */,
 				A2FD94E928BAD5820039E997 /* HomeCollectionViewCell.swift */,
+				3BEFD8AE28BB709900011AEB /* Home.storyboard */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -543,8 +563,11 @@
 			files = (
 				3BFB184728BA0F0A008D58F0 /* LaunchScreen.storyboard in Resources */,
 				3BFB186C28BA0F80008D58F0 /* Colors.xcassets in Resources */,
+				3BEFD8B128BB711100011AEB /* List.storyboard in Resources */,
 				3B312B8628BAFE250048AA8D /* WriteView.storyboard in Resources */,
+				3BEFD8AF28BB709900011AEB /* Home.storyboard in Resources */,
 				3BFB184228BA0F09008D58F0 /* Main.storyboard in Resources */,
+				3BEFD8AD28BB65C700011AEB /* tabBar.storyboard in Resources */,
 				3BE8A0F728BA6F9A00C09CC1 /* Splash.storyboard in Resources */,
 				3BE8A0FB28BA728600C09CC1 /* Ghanachocolate.otf in Resources */,
 				3BFB186D28BA0F80008D58F0 /* Assets.xcassets in Resources */,
@@ -631,6 +654,7 @@
 				3B312B8828BAFE320048AA8D /* writeVC.swift in Sources */,
 				3BFB186F28BA0F80008D58F0 /* StringLiterals.swift in Sources */,
 				3BFB187E28BA0F80008D58F0 /* UITableViewRegisterable.swift in Sources */,
+				3BEFD8AB28BB65BB00011AEB /* customTabBar.swift in Sources */,
 				3BE8A0EE28BA3D2400C09CC1 /* UIImage+.swift in Sources */,
 				3BFB188F28BA0FC2008D58F0 /* setImage.swift in Sources */,
 				3BE8A0E728BA3D2400C09CC1 /* UIDevice+.swift in Sources */,
