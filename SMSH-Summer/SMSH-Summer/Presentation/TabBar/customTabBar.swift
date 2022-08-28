@@ -26,7 +26,8 @@ extension customTabBar {
     
     private func setTabBarController() {
         let homeVC = HomeViewController()
-        let writeVC = writeVC()
+        let nav = UINavigationController(rootViewController: WriteLocationVC())
+        let writeVC = nav
         let listVC = ListViewController()
         
         homeVC.tabBarItem = UITabBarItem(

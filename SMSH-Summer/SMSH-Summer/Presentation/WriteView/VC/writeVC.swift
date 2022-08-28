@@ -33,17 +33,13 @@ class writeVC: UIViewController {
 // MARK: - Extension
 extension writeVC {
     private func setUI() {
-        let backButton = UIButton()
-        backButton.setImage(ImageLiterals.Write.writeViewLeftBtn, for: .normal)
-        backButton.tintColor = .Black
+        let backButton = UIBarButtonItem(image: ImageLiterals.Write.writeViewLeftBtn, style: .plain, target: self, action: #selector(dismissButtonTapped))
+       
         
-        let saveButton = UIButton()
-        saveButton.setTitle(I18N.Write.navigation.save, for: .normal)
-        saveButton.setTitleColor(.Black, for: .normal)
-        saveButton.titleLabel?.font = .AppleSDGothicNeoRegular(ofSize: 14)
+        let saveButton = UIBarButtonItem(title: I18N.Write.navigation.save, style: .plain, target: self, action: #selector(saveButtonTapped))
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: saveButton)
+        self.navigationItem.leftBarButtonItem = backButton
+        self.navigationItem.rightBarButtonItem = saveButton
         self.navigationItem.title = I18N.Write.navigation.write
     }
     
@@ -60,7 +56,19 @@ extension writeVC {
         writeTV.dataSource = self
     }
     
+    // MARK: - Actions
+    @objc func dismissButtonTapped(_ sender: UIBarButtonItem) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func saveButtonTapped(_ sender: UIBarButtonItem) {
+        
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
+
+
 
 // MARK: - UITableViewDelegate
 
