@@ -58,4 +58,10 @@ class ModuleFactory: ModuleFactoryProtocol {
         let tb = customTabBar.controllerFromStoryboard(.tabBar)
         return tb
     }
+
+    func writeLocationVC() -> WriteLocationVC {
+        let vc = WriteLocationVC()
+        return vc
+    }
+
 }
