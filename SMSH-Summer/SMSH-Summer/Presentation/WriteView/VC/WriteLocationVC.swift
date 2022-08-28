@@ -91,10 +91,28 @@ class WriteLocationVC: UIViewController {
         
         locationManager.delegate = self
         naverMapView.touchDelegate = self
+        
+        //self.tabBarController?.tabBar.layer.zPosition = -1
+        self.tabBarController?.tabBar.isHidden = true
+        
+        self.navigationController?.navigationBar.backgroundColor = .white
+        self.navigationItem.title = "등록하기"
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(dismissButtonTapped(_:)))
+        
+        didHereButton.addTarget(self, action: #selector(goNextWritePageButtonTapped), for: .touchUpInside)
     }
     
     // MARK: - Actions
+    @objc func dismissButtonTapped(_ sender: UIBarButtonItem) {
+        self.tabBarController?.tabBar.isHidden = false
+        view.layoutIfNeeded()
+    }
     
+    @objc func goNextWritePageButtonTapped(_ sender: UIButton) {
+        let vc = writeVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+
     // MARK: - Naver Map 설정
     func moveLocation() {
 
@@ -119,7 +137,7 @@ class WriteLocationVC: UIViewController {
     
     func setConstraints() {
         naverMapView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.edges.equalTo(view.safeAreaLayoutGuide)
         }
         
         currentLocationButton.snp.makeConstraints { make in
