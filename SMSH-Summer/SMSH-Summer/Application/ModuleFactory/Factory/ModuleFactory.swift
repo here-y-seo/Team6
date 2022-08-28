@@ -54,13 +54,14 @@ class ModuleFactory: ModuleFactoryProtocol {
         return vc
     }
     
-    func writeLocationVC() -> WriteLocationVC {
-        let vc = WriteLocationVC()
-        return vc
-    }
-    
     func TabBar() -> customTabBar {
         let tb = customTabBar.controllerFromStoryboard(.tabBar)
         return tb
     }
+
+    func writeLocationVC() -> WriteLocationVC {
+        let vc = WriteLocationVC()
+        return vc
+    }
+
 }
