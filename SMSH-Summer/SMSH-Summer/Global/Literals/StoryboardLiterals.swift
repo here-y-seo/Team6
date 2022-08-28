@@ -20,6 +20,7 @@ enum Storyboards: String {
     case Splash = "Splash"
     case WriteView = "WriteView"
     case tabBar = "tabBar"
+    case typeSelect = "typeSelect"
 }
 
 extension UIStoryboard {
