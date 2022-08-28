@@ -12,6 +12,7 @@ protocol ModuleFactoryProtocol {
     
     // MARK: - Auth
     func VC() -> ViewController
+    func splashVC() -> SplashVC
 }
 
 class ModuleFactory: ModuleFactoryProtocol {
@@ -28,6 +29,11 @@ class ModuleFactory: ModuleFactoryProtocol {
     
     func Home() -> HomeViewController {
         let vc = HomeViewController()
+        return vc
+    }
+    
+    func splashVC() -> SplashVC {
+        let vc = SplashVC.controllerFromStoryboard(.Splash)
         return vc
     }
 }
