@@ -11,7 +11,6 @@ import Then
 
 class AuthorizationViewController: UIViewController {
     // MARK: - Properties
-    
     var titleLabel = UILabel().then {
         $0.font = .AppleSDGothicNeoBold(ofSize: 24)
         $0.textColor = .Black
@@ -69,8 +68,6 @@ class AuthorizationViewController: UIViewController {
         setConstraints()
     }
     
-    // MARK: - Helpers
-    
     func setupUI() {
         view.addSubviews(titleLabel, descriptionLabel, firstSubtitleLabel, firstSubDescriptionLabel, secondSubtitleLabel, secondSubDescriptionLabel, okButton)
         view.backgroundColor = .white
@@ -123,8 +120,5 @@ class AuthorizationViewController: UIViewController {
         
         
     }
-    
-
-   
 
 }
