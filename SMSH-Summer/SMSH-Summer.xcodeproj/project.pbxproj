@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B312B8628BAFE250048AA8D /* WriteView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B312B8528BAFE250048AA8D /* WriteView.storyboard */; };
+		3B312B8828BAFE320048AA8D /* writeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B312B8728BAFE320048AA8D /* writeVC.swift */; };
 		3BE8A0D128BA37B200C09CC1 /* StoryboardLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8A0D028BA37B200C09CC1 /* StoryboardLiterals.swift */; };
 		3BE8A0D528BA380300C09CC1 /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8A0D428BA380300C09CC1 /* ModuleFactory.swift */; };
 		3BE8A0D728BA386200C09CC1 /* controllerFromStoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8A0D628BA386200C09CC1 /* controllerFromStoryBoard.swift */; };
@@ -23,7 +25,7 @@
 		3BE8A0F128BA3D2400C09CC1 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8A0E528BA3D2400C09CC1 /* UIColor+.swift */; };
 		3BE8A0F228BA3D2400C09CC1 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8A0E628BA3D2400C09CC1 /* String+.swift */; };
 		3BE8A0F728BA6F9A00C09CC1 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE8A0F628BA6F9A00C09CC1 /* Splash.storyboard */; };
-		3BE8A0F928BA6FBA00C09CC1 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8A0F828BA6FBA00C09CC1 /* SplashVC.swift */; };
+		3BE8A0F928BA6FBA00C09CC1 /* splashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8A0F828BA6FBA00C09CC1 /* splashVC.swift */; };
 		3BE8A0FB28BA728600C09CC1 /* Ghanachocolate.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3BE8A0FA28BA728600C09CC1 /* Ghanachocolate.otf */; };
 		3BFB183B28BA0F09008D58F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB183A28BA0F09008D58F0 /* AppDelegate.swift */; };
 		3BFB183D28BA0F09008D58F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB183C28BA0F09008D58F0 /* SceneDelegate.swift */; };
@@ -49,6 +51,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B312B8528BAFE250048AA8D /* WriteView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WriteView.storyboard; sourceTree = "<group>"; };
+		3B312B8728BAFE320048AA8D /* writeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = writeVC.swift; sourceTree = "<group>"; };
 		3BE8A0D028BA37B200C09CC1 /* StoryboardLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardLiterals.swift; sourceTree = "<group>"; };
 		3BE8A0D428BA380300C09CC1 /* ModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactory.swift; sourceTree = "<group>"; };
 		3BE8A0D628BA386200C09CC1 /* controllerFromStoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = controllerFromStoryBoard.swift; sourceTree = "<group>"; };
@@ -65,7 +69,7 @@
 		3BE8A0E528BA3D2400C09CC1 /* UIColor+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		3BE8A0E628BA3D2400C09CC1 /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		3BE8A0F628BA6F9A00C09CC1 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
-		3BE8A0F828BA6FBA00C09CC1 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		3BE8A0F828BA6FBA00C09CC1 /* splashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = splashVC.swift; sourceTree = "<group>"; };
 		3BE8A0FA28BA728600C09CC1 /* Ghanachocolate.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ghanachocolate.otf; sourceTree = "<group>"; };
 		3BFB183728BA0F09008D58F0 /* SMSH-Summer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SMSH-Summer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BFB183A28BA0F09008D58F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +117,23 @@
 				89CBE393D29ACB4A5B940C68 /* Pods-SMSH-Summer.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		3B312B8328BAFE010048AA8D /* WriteView */ = {
+			isa = PBXGroup;
+			children = (
+				3B312B8428BAFE180048AA8D /* VC */,
+			);
+			path = WriteView;
+			sourceTree = "<group>";
+		};
+		3B312B8428BAFE180048AA8D /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				3B312B8528BAFE250048AA8D /* WriteView.storyboard */,
+				3B312B8728BAFE320048AA8D /* writeVC.swift */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 		3BE8A0D228BA37D500C09CC1 /* ModuleFactory */ = {
@@ -179,7 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				3BE8A0F628BA6F9A00C09CC1 /* Splash.storyboard */,
-				3BE8A0F828BA6FBA00C09CC1 /* SplashVC.swift */,
+				3BE8A0F828BA6FBA00C09CC1 /* splashVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -284,6 +305,7 @@
 		3BFB187F28BA0F9A008D58F0 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				3B312B8328BAFE010048AA8D /* WriteView */,
 				3BE8A0F328BA6F7B00C09CC1 /* Splash */,
 				A2FD94E328BA76050039E997 /* Home */,
 				3BFB189628BA0FF7008D58F0 /* Main */,
@@ -441,6 +463,7 @@
 			files = (
 				3BFB184728BA0F0A008D58F0 /* LaunchScreen.storyboard in Resources */,
 				3BFB186C28BA0F80008D58F0 /* Colors.xcassets in Resources */,
+				3B312B8628BAFE250048AA8D /* WriteView.storyboard in Resources */,
 				3BFB184228BA0F09008D58F0 /* Main.storyboard in Resources */,
 				3BE8A0F728BA6F9A00C09CC1 /* Splash.storyboard in Resources */,
 				3BE8A0FB28BA728600C09CC1 /* Ghanachocolate.otf in Resources */,
@@ -510,7 +533,7 @@
 				3BE8A0ED28BA3D2400C09CC1 /* UIButton+.swift in Sources */,
 				3BFB183B28BA0F09008D58F0 /* AppDelegate.swift in Sources */,
 				3BE8A0D728BA386200C09CC1 /* controllerFromStoryBoard.swift in Sources */,
-				3BE8A0F928BA6FBA00C09CC1 /* SplashVC.swift in Sources */,
+				3BE8A0F928BA6FBA00C09CC1 /* splashVC.swift in Sources */,
 				3BE8A0EA28BA3D2400C09CC1 /* UIView+.swift in Sources */,
 				3BFB188D28BA0FC2008D58F0 /* setRootViewController.swift in Sources */,
 				3BE8A0F128BA3D2400C09CC1 /* UIColor+.swift in Sources */,
@@ -518,6 +541,7 @@
 				3BFB188A28BA0FC2008D58F0 /* showToast.swift in Sources */,
 				3BE8A0F028BA3D2400C09CC1 /* UITextFeild+.swift in Sources */,
 				3BFB187028BA0F80008D58F0 /* ImageLiterals.swift in Sources */,
+				3B312B8828BAFE320048AA8D /* writeVC.swift in Sources */,
 				3BFB186F28BA0F80008D58F0 /* StringLiterals.swift in Sources */,
 				3BFB187E28BA0F80008D58F0 /* UITableViewRegisterable.swift in Sources */,
 				3BE8A0EE28BA3D2400C09CC1 /* UIImage+.swift in Sources */,
