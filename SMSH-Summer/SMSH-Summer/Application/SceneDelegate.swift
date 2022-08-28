@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let rootViewController = ModuleFactory.resolve().ListVC()
+        let rootViewController = ModuleFactory.resolve().AuthorizationVC()
 //        let navigation = UINavigationController(rootViewController: rootViewController)
         let window = UIWindow(windowScene: windowScene)
         window.rootViewController = rootViewController
