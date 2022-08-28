@@ -30,6 +30,7 @@
 		3BE8A0F728BA6F9A00C09CC1 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE8A0F628BA6F9A00C09CC1 /* Splash.storyboard */; };
 		3BE8A0F928BA6FBA00C09CC1 /* splashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8A0F828BA6FBA00C09CC1 /* splashVC.swift */; };
 		3BE8A0FB28BA728600C09CC1 /* Ghanachocolate.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3BE8A0FA28BA728600C09CC1 /* Ghanachocolate.otf */; };
+		3BEFD8A828BB421200011AEB /* typeCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEFD8A728BB421200011AEB /* typeCVC.swift */; };
 		3BFB183B28BA0F09008D58F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB183A28BA0F09008D58F0 /* AppDelegate.swift */; };
 		3BFB183D28BA0F09008D58F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB183C28BA0F09008D58F0 /* SceneDelegate.swift */; };
 		3BFB183F28BA0F09008D58F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB183E28BA0F09008D58F0 /* ViewController.swift */; };
@@ -77,6 +78,7 @@
 		3BE8A0F628BA6F9A00C09CC1 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		3BE8A0F828BA6FBA00C09CC1 /* splashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = splashVC.swift; sourceTree = "<group>"; };
 		3BE8A0FA28BA728600C09CC1 /* Ghanachocolate.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ghanachocolate.otf; sourceTree = "<group>"; };
+		3BEFD8A728BB421200011AEB /* typeCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typeCVC.swift; sourceTree = "<group>"; };
 		3BFB183728BA0F09008D58F0 /* SMSH-Summer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SMSH-Summer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BFB183A28BA0F09008D58F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BFB183C28BA0F09008D58F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,7 +130,7 @@
 		3B312B8328BAFE010048AA8D /* WriteView */ = {
 			isa = PBXGroup;
 			children = (
-				3B312B8928BB0A950048AA8D /* Views */,
+				3B312B8928BB0A950048AA8D /* Cells */,
 				3B312B8428BAFE180048AA8D /* VC */,
 			);
 			path = WriteView;
@@ -143,14 +145,13 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
-		3B312B8928BB0A950048AA8D /* Views */ = {
+		3B312B8928BB0A950048AA8D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				3B312B9428BB24D20048AA8D /* placeTVC.swift */,
-				3B312B9628BB25FD0048AA8D /* typeTVC.swift */,
-				3B312B9828BB260D0048AA8D /* contentTVC.swift */,
+				3BEFD8A628BB41FD00011AEB /* CVC */,
+				3BEFD8A528BB41EA00011AEB /* TVC */,
 			);
-			path = Views;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		3BE8A0D228BA37D500C09CC1 /* ModuleFactory */ = {
@@ -220,6 +221,24 @@
 				3BE8A0F828BA6FBA00C09CC1 /* splashVC.swift */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		3BEFD8A528BB41EA00011AEB /* TVC */ = {
+			isa = PBXGroup;
+			children = (
+				3B312B9428BB24D20048AA8D /* placeTVC.swift */,
+				3B312B9628BB25FD0048AA8D /* typeTVC.swift */,
+				3B312B9828BB260D0048AA8D /* contentTVC.swift */,
+			);
+			path = TVC;
+			sourceTree = "<group>";
+		};
+		3BEFD8A628BB41FD00011AEB /* CVC */ = {
+			isa = PBXGroup;
+			children = (
+				3BEFD8A728BB421200011AEB /* typeCVC.swift */,
+			);
+			path = CVC;
 			sourceTree = "<group>";
 		};
 		3BFB182E28BA0F09008D58F0 = {
@@ -558,6 +577,7 @@
 				3BE8A0F128BA3D2400C09CC1 /* UIColor+.swift in Sources */,
 				3BE8A0EC28BA3D2400C09CC1 /* UILabel+.swift in Sources */,
 				3BFB188A28BA0FC2008D58F0 /* showToast.swift in Sources */,
+				3BEFD8A828BB421200011AEB /* typeCVC.swift in Sources */,
 				3BE8A0F028BA3D2400C09CC1 /* UITextFeild+.swift in Sources */,
 				3BFB187028BA0F80008D58F0 /* ImageLiterals.swift in Sources */,
 				3B312B9728BB25FD0048AA8D /* typeTVC.swift in Sources */,

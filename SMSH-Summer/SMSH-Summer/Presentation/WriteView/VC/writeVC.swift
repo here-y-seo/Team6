@@ -10,12 +10,14 @@ import UIKit
 class writeVC: UIViewController {
 
     // MARK: - UI Components
-    private let writeTV = UITableView().then {
-        $0.backgroundColor = .white
-        $0.register(placeTVC.self, forCellReuseIdentifier: placeTVC.identifier)
-        $0.register(typeTVC.self, forCellReuseIdentifier: typeTVC.identifier)
-        $0.register(contentTVC.self, forCellReuseIdentifier: contentTVC.identifier)
-    }
+    private let writeTV: UITableView = {
+        let tv = UITableView()
+        tv.register(placeTVC.self, forCellReuseIdentifier: placeTVC.identifier)
+        tv.register(typeTVC.self, forCellReuseIdentifier: typeTVC.identifier)
+        tv.register(contentTVC.self, forCellReuseIdentifier: contentTVC.identifier)
+        tv.allowsSelection = false
+        return tv
+    }()
     
     // MARK: - View Life Cycle
     
@@ -23,7 +25,6 @@ class writeVC: UIViewController {
         super.viewDidLoad()
         setUI()
         setDelegate()
-        registerCell()
         setLayout()
     }
 
@@ -37,13 +38,13 @@ extension writeVC {
         backButton.tintColor = .Black
         
         let saveButton = UIButton()
-        saveButton.setTitle(I18N.Write.save, for: .normal)
+        saveButton.setTitle(I18N.Write.navigation.save, for: .normal)
         saveButton.setTitleColor(.Black, for: .normal)
         saveButton.titleLabel?.font = .AppleSDGothicNeoRegular(ofSize: 14)
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: saveButton)
-        self.navigationItem.title = I18N.Write.write
+        self.navigationItem.title = I18N.Write.navigation.write
     }
     
     private func setLayout() {
@@ -59,8 +60,6 @@ extension writeVC {
         writeTV.dataSource = self
     }
     
-    private func registerCell() {
-    }
 }
 
 // MARK: - UITableViewDelegate
@@ -98,6 +97,17 @@ extension writeVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        let width = UIScreen.main.bounds.size.width
+        
+        switch indexPath.section {
+        case 0:
+            return width * 0.344
+        case 1:
+            return width * 0.326
+        case 2:
+            return 500
+        default:
+            return 200
+        }
     }
 }
