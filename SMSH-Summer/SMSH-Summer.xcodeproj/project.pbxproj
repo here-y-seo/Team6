@@ -35,6 +35,8 @@
 		3BEFD8AD28BB65C700011AEB /* tabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEFD8AC28BB65C700011AEB /* tabBar.storyboard */; };
 		3BEFD8AF28BB709900011AEB /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEFD8AE28BB709900011AEB /* Home.storyboard */; };
 		3BEFD8B128BB711100011AEB /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEFD8B028BB711100011AEB /* List.storyboard */; };
+		3BEFD8C228BB80D900011AEB /* typeSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEFD8C128BB80D900011AEB /* typeSelect.storyboard */; };
+		3BEFD8C428BB80E700011AEB /* typeSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEFD8C328BB80E700011AEB /* typeSelectVC.swift */; };
 		3BFB183B28BA0F09008D58F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB183A28BA0F09008D58F0 /* AppDelegate.swift */; };
 		3BFB183D28BA0F09008D58F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB183C28BA0F09008D58F0 /* SceneDelegate.swift */; };
 		3BFB183F28BA0F09008D58F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB183E28BA0F09008D58F0 /* ViewController.swift */; };
@@ -91,6 +93,8 @@
 		3BEFD8AC28BB65C700011AEB /* tabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = tabBar.storyboard; sourceTree = "<group>"; };
 		3BEFD8AE28BB709900011AEB /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		3BEFD8B028BB711100011AEB /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
+		3BEFD8C128BB80D900011AEB /* typeSelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = typeSelect.storyboard; sourceTree = "<group>"; };
+		3BEFD8C328BB80E700011AEB /* typeSelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typeSelectVC.swift; sourceTree = "<group>"; };
 		3BFB183728BA0F09008D58F0 /* SMSH-Summer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SMSH-Summer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BFB183A28BA0F09008D58F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BFB183C28BA0F09008D58F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -267,6 +271,15 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		3BEFD8C028BB80CA00011AEB /* typeSelect */ = {
+			isa = PBXGroup;
+			children = (
+				3BEFD8C128BB80D900011AEB /* typeSelect.storyboard */,
+				3BEFD8C328BB80E700011AEB /* typeSelectVC.swift */,
+			);
+			path = typeSelect;
+			sourceTree = "<group>";
+		};
 		3BFB182E28BA0F09008D58F0 = {
 			isa = PBXGroup;
 			children = (
@@ -367,6 +380,7 @@
 		3BFB187F28BA0F9A008D58F0 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				3BEFD8C028BB80CA00011AEB /* typeSelect */,
 				3BEFD8A928BB658600011AEB /* TabBar */,
 				A216DBEB28BB38FD00B7C9D8 /* Authorization */,
 				A2F7A18028BB077A001BF532 /* List */,
@@ -563,6 +577,7 @@
 			files = (
 				3BFB184728BA0F0A008D58F0 /* LaunchScreen.storyboard in Resources */,
 				3BFB186C28BA0F80008D58F0 /* Colors.xcassets in Resources */,
+				3BEFD8C228BB80D900011AEB /* typeSelect.storyboard in Resources */,
 				3BEFD8B128BB711100011AEB /* List.storyboard in Resources */,
 				3B312B8628BAFE250048AA8D /* WriteView.storyboard in Resources */,
 				3BEFD8AF28BB709900011AEB /* Home.storyboard in Resources */,
@@ -647,6 +662,7 @@
 				3BE8A0F128BA3D2400C09CC1 /* UIColor+.swift in Sources */,
 				3BE8A0EC28BA3D2400C09CC1 /* UILabel+.swift in Sources */,
 				3BFB188A28BA0FC2008D58F0 /* showToast.swift in Sources */,
+				3BEFD8C428BB80E700011AEB /* typeSelectVC.swift in Sources */,
 				3BEFD8A828BB421200011AEB /* typeCVC.swift in Sources */,
 				3BE8A0F028BA3D2400C09CC1 /* UITextFeild+.swift in Sources */,
 				3BFB187028BA0F80008D58F0 /* ImageLiterals.swift in Sources */,

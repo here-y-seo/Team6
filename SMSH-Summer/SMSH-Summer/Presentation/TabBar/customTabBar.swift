@@ -40,8 +40,8 @@ extension customTabBar {
         )
         listVC.tabBarItem = UITabBarItem(
             title: "목록보기",
-            image: UIImage(systemName: "list.clipboard"),
-            selectedImage: UIImage(systemName: "list.clipboard")
+            image: UIImage(systemName: "list.bullet.rectangle.portrait"),
+            selectedImage: UIImage(systemName: "list.bullet.rectangle.portrait")
         )
         
         setViewControllers([homeVC, writeVC, listVC], animated: true)
