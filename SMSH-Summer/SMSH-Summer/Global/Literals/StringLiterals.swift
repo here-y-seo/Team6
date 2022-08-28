@@ -15,4 +15,9 @@ struct I18N {
 지도
 """
     }
+    
+    struct Write {
+        static let write = "작성하기"
+        static let save = "저장하기"
+    }
 }

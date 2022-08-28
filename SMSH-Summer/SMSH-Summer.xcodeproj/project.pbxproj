@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3B312B8628BAFE250048AA8D /* WriteView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B312B8528BAFE250048AA8D /* WriteView.storyboard */; };
 		3B312B8828BAFE320048AA8D /* writeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B312B8728BAFE320048AA8D /* writeVC.swift */; };
+		3B312B9528BB24D20048AA8D /* placeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B312B9428BB24D20048AA8D /* placeTVC.swift */; };
+		3B312B9728BB25FD0048AA8D /* typeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B312B9628BB25FD0048AA8D /* typeTVC.swift */; };
+		3B312B9928BB260D0048AA8D /* contentTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B312B9828BB260D0048AA8D /* contentTVC.swift */; };
 		3BE8A0D128BA37B200C09CC1 /* StoryboardLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8A0D028BA37B200C09CC1 /* StoryboardLiterals.swift */; };
 		3BE8A0D528BA380300C09CC1 /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8A0D428BA380300C09CC1 /* ModuleFactory.swift */; };
 		3BE8A0D728BA386200C09CC1 /* controllerFromStoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8A0D628BA386200C09CC1 /* controllerFromStoryBoard.swift */; };
@@ -53,6 +56,9 @@
 /* Begin PBXFileReference section */
 		3B312B8528BAFE250048AA8D /* WriteView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WriteView.storyboard; sourceTree = "<group>"; };
 		3B312B8728BAFE320048AA8D /* writeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = writeVC.swift; sourceTree = "<group>"; };
+		3B312B9428BB24D20048AA8D /* placeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = placeTVC.swift; sourceTree = "<group>"; };
+		3B312B9628BB25FD0048AA8D /* typeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typeTVC.swift; sourceTree = "<group>"; };
+		3B312B9828BB260D0048AA8D /* contentTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contentTVC.swift; sourceTree = "<group>"; };
 		3BE8A0D028BA37B200C09CC1 /* StoryboardLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardLiterals.swift; sourceTree = "<group>"; };
 		3BE8A0D428BA380300C09CC1 /* ModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactory.swift; sourceTree = "<group>"; };
 		3BE8A0D628BA386200C09CC1 /* controllerFromStoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = controllerFromStoryBoard.swift; sourceTree = "<group>"; };
@@ -122,6 +128,7 @@
 		3B312B8328BAFE010048AA8D /* WriteView */ = {
 			isa = PBXGroup;
 			children = (
+				3B312B8928BB0A950048AA8D /* Views */,
 				3B312B8428BAFE180048AA8D /* VC */,
 			);
 			path = WriteView;
@@ -134,6 +141,16 @@
 				3B312B8728BAFE320048AA8D /* writeVC.swift */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		3B312B8928BB0A950048AA8D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3B312B9428BB24D20048AA8D /* placeTVC.swift */,
+				3B312B9628BB25FD0048AA8D /* typeTVC.swift */,
+				3B312B9828BB260D0048AA8D /* contentTVC.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		3BE8A0D228BA37D500C09CC1 /* ModuleFactory */ = {
@@ -523,6 +540,7 @@
 				3BE8A0D128BA37B200C09CC1 /* StoryboardLiterals.swift in Sources */,
 				3BE8A0E828BA3D2400C09CC1 /* UITextView++.swift in Sources */,
 				3BFB183F28BA0F09008D58F0 /* ViewController.swift in Sources */,
+				3B312B9928BB260D0048AA8D /* contentTVC.swift in Sources */,
 				3BE8A0E928BA3D2400C09CC1 /* UITabBar+.swift in Sources */,
 				3BFB187D28BA0F80008D58F0 /* UICollectionViewRegisterable.swift in Sources */,
 				A2FD94E828BA76390039E997 /* HomeViewController.swift in Sources */,
@@ -531,6 +549,7 @@
 				A2FD94EA28BAD5820039E997 /* HomeCollectionViewCell.swift in Sources */,
 				3BE8A0EF28BA3D2400C09CC1 /* UITableView+.swift in Sources */,
 				3BE8A0ED28BA3D2400C09CC1 /* UIButton+.swift in Sources */,
+				3B312B9528BB24D20048AA8D /* placeTVC.swift in Sources */,
 				3BFB183B28BA0F09008D58F0 /* AppDelegate.swift in Sources */,
 				3BE8A0D728BA386200C09CC1 /* controllerFromStoryBoard.swift in Sources */,
 				3BE8A0F928BA6FBA00C09CC1 /* splashVC.swift in Sources */,
@@ -541,6 +560,7 @@
 				3BFB188A28BA0FC2008D58F0 /* showToast.swift in Sources */,
 				3BE8A0F028BA3D2400C09CC1 /* UITextFeild+.swift in Sources */,
 				3BFB187028BA0F80008D58F0 /* ImageLiterals.swift in Sources */,
+				3B312B9728BB25FD0048AA8D /* typeTVC.swift in Sources */,
 				3B312B8828BAFE320048AA8D /* writeVC.swift in Sources */,
 				3BFB186F28BA0F80008D58F0 /* StringLiterals.swift in Sources */,
 				3BFB187E28BA0F80008D58F0 /* UITableViewRegisterable.swift in Sources */,

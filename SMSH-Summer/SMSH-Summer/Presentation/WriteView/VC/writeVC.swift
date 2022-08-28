@@ -10,14 +10,94 @@ import UIKit
 class writeVC: UIViewController {
 
     // MARK: - UI Components
+    private let writeTV = UITableView().then {
+        $0.backgroundColor = .white
+        $0.register(placeTVC.self, forCellReuseIdentifier: placeTVC.identifier)
+        $0.register(typeTVC.self, forCellReuseIdentifier: typeTVC.identifier)
+        $0.register(contentTVC.self, forCellReuseIdentifier: contentTVC.identifier)
+    }
     
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUI()
+        setDelegate()
+        registerCell()
+        setLayout()
     }
 
 }
 
 // MARK: - Extension
+extension writeVC {
+    private func setUI() {
+        let backButton = UIButton()
+        backButton.setImage(ImageLiterals.Write.writeViewLeftBtn, for: .normal)
+        backButton.tintColor = .Black
+        
+        let saveButton = UIButton()
+        saveButton.setTitle(I18N.Write.save, for: .normal)
+        saveButton.setTitleColor(.Black, for: .normal)
+        saveButton.titleLabel?.font = .AppleSDGothicNeoRegular(ofSize: 14)
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: saveButton)
+        self.navigationItem.title = I18N.Write.write
+    }
+    
+    private func setLayout() {
+        view.addSubviews(writeTV)
+        
+        writeTV.snp.makeConstraints { make in
+            make.top.trailing.bottom.leading.equalToSuperview()
+        }
+    }
+    
+    private func setDelegate() {
+        writeTV.delegate = self
+        writeTV.dataSource = self
+    }
+    
+    private func registerCell() {
+    }
+}
+
+// MARK: - UITableViewDelegate
+
+extension writeVC: UITableViewDelegate {
+    
+}
+
+// MARK: - UITableViewDataSource
+
+extension writeVC: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath.section {
+        case 0:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: placeTVC.identifier, for: indexPath) as? placeTVC else { return UITableViewCell() }
+            return cell
+        case 1:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: typeTVC.identifier, for: indexPath) as? typeTVC else { return UITableViewCell() }
+            return cell
+        case 2:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: contentTVC.identifier, for: indexPath) as? contentTVC else { return UITableViewCell() }
+            return cell
+        default:
+            return UITableViewCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+}
