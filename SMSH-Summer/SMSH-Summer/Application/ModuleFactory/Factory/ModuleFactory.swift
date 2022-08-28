@@ -36,4 +36,9 @@ class ModuleFactory: ModuleFactoryProtocol {
         let vc = SplashVC.controllerFromStoryboard(.Splash)
         return vc
     }
+    
+    func ListVC() -> ListViewController {
+        let vc = ListViewController()
+        return vc
+    }
 }
