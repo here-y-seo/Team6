@@ -167,22 +167,14 @@
 			isa = PBXGroup;
 			children = (
 				3BE8A0F528BA6F8A00C09CC1 /* VC */,
-				3BE8A0F428BA6F8500C09CC1 /* Views */,
 			);
 			path = Splash;
-			sourceTree = "<group>";
-		};
-		3BE8A0F428BA6F8500C09CC1 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				3BE8A0F628BA6F9A00C09CC1 /* Splash.storyboard */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		3BE8A0F528BA6F8A00C09CC1 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				3BE8A0F628BA6F9A00C09CC1 /* Splash.storyboard */,
 				3BE8A0F828BA6FBA00C09CC1 /* SplashVC.swift */,
 			);
 			path = VC;
@@ -311,7 +303,6 @@
 		3BFB189328BA0FDD008D58F0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3BFB184028BA0F09008D58F0 /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -320,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				3BFB183E28BA0F09008D58F0 /* ViewController.swift */,
+				3BFB184028BA0F09008D58F0 /* Main.storyboard */,
 			);
 			path = VC;
 			sourceTree = "<group>";
