@@ -7,12 +7,22 @@
 
 import UIKit
 import NMapsMap
+import CoreLocation
 
 class WriteLocationVC: UIViewController {
     // MARK: - Properties
     
+    let locationManager = CLLocationManager()
+
     /// 네이버지도 관련
     lazy var naverMapView = NMFMapView(frame: view.frame)
+    
+    /// - 기본 좌표 : 숙대
+    var coord = NMGLatLng(lat: 37.545993, lng: 126.964707) {
+        didSet {
+            moveLocation()
+        }
+    }
     
     /// 현재 위치 버튼
     let currentLocationButton = UIButton().then {
@@ -78,10 +88,27 @@ class WriteLocationVC: UIViewController {
         
         setLayout()
         setConstraints()
+        
+        locationManager.delegate = self
+        naverMapView.touchDelegate = self
     }
     
     // MARK: - Actions
     
+    // MARK: - Naver Map 설정
+    func moveLocation() {
+
+        let locationOverlay = naverMapView.locationOverlay
+        locationOverlay.hidden = true
+        locationOverlay.location = coord
+        locationOverlay.icon = NMFOverlayImage(name: "icon-location-overlay")
+
+        
+        let cameraUpdate = NMFCameraUpdate(scrollTo: coord)
+        cameraUpdate.animation = .easeIn
+        naverMapView.moveCamera(cameraUpdate)
+        
+    }
     
     // MARK: - Helpers
     func setLayout() {
@@ -139,8 +166,38 @@ class WriteLocationVC: UIViewController {
             
         }
         
+    }
+
+}
+
+/// Location Manager Delegate
+extension WriteLocationVC: CLLocationManagerDelegate {
+
+    /// - 유저의 위치를 성공적으로 가지고 온 경우
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print(#function, locations)
+        if let location = locations.last?.coordinate as? CLLocationCoordinate2D  {
+            let longitude: CLLocationDegrees = location.longitude
+            let latitude: CLLocationDegrees = location.latitude
+            
+            coord = NMGLatLng(lat: latitude, lng: longitude)
+        
+        }
+        
+        locationManager.stopUpdatingLocation()
         
         
     }
+    
+}
 
+
+extension WriteLocationVC: NMFMapViewTouchDelegate {
+    
+    func mapView(_ mapView: NMFMapView, didTapMap latlng: NMGLatLng, point: CGPoint) {
+        print("\(latlng.lat), \(latlng.lng)")
+        coord = latlng
+        
+        addressLabel.text = "\(latlng)"
+    }
 }
