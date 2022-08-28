@@ -42,4 +42,14 @@ class ModuleFactory: ModuleFactoryProtocol {
         let vc = writeVC.controllerFromStoryboard(.WriteView)
         return vc
     }
+    
+    func ListVC() -> ListViewController {
+        let vc = ListViewController()
+        return vc
+    }
+    
+    func AuthorizationVC() -> AuthorizationViewController {
+        let vc = AuthorizationViewController()
+        return vc
+    }
 }
