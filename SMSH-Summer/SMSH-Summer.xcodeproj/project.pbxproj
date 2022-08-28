@@ -852,6 +852,12 @@
 				DEVELOPMENT_TEAM = F7B353LPM3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SMSH-Summer/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "카메라에서 사진을 촬영해 선행 내용에 추가하기 위해 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "사용자의 현재 위치 주변의 선행 내역을 보여주고, 현재 위치로 선행 기록을 하기 위해서 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "사용자의 현재 위치 주변의 선행 내역을 보여주고, 현재 위치로 선행 기록을 하기 위해서 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "사용자의 현재 위치 주변의 선행 내역을 보여주고, 현재 위치로 선행 기록을 하기 위해서 권한이 필요합니다.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "동영상 접근권한";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "갤러리에서 사진을 선택해서 선행 내용에 추가하기 위해 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -883,6 +889,12 @@
 				DEVELOPMENT_TEAM = F7B353LPM3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SMSH-Summer/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "카메라에서 사진을 촬영해 선행 내용에 추가하기 위해 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "사용자의 현재 위치 주변의 선행 내역을 보여주고, 현재 위치로 선행 기록을 하기 위해서 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "사용자의 현재 위치 주변의 선행 내역을 보여주고, 현재 위치로 선행 기록을 하기 위해서 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "사용자의 현재 위치 주변의 선행 내역을 보여주고, 현재 위치로 선행 기록을 하기 위해서 권한이 필요합니다.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "동영상 접근권한";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "갤러리에서 사진을 선택해서 선행 내용에 추가하기 위해 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

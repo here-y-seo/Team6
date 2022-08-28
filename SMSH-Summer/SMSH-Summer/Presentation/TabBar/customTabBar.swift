@@ -21,6 +21,7 @@ extension customTabBar {
     private func setUI() {
         tabBar.tintColor = .primaryColor
         tabBar.unselectedItemTintColor = .tabBarUnSelected
+        tabBar.backgroundColor = .white
     }
     
     private func setTabBarController() {
