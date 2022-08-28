@@ -67,6 +67,14 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Helpers
     
+    func configureData(_ data: GoodDeed) {
+        thumbnail.image = UIImage(named: data.kind.getThumbnail())
+        titleLabel.text = data.title
+        descriptionLabel.text = data.description
+        locationLabel.text = "\(Int.random(in: 300...987)) m" // 위경도로 수정
+        dateLabel.text = data.date
+    }
+    
     func setupUI() {
         
         self.contentView.backgroundColor = .white

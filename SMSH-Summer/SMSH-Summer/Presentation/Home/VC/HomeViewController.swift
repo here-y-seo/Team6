@@ -17,6 +17,9 @@ class HomeViewController: UIViewController {
     /// Location - 위치관련 처리를 위해 싱글톤 객체 선언
     let locationManager = CLLocationManager()
     
+    /// 콜렉션 뷰 데이터
+    var list = GoodDeed.list
+    
     /// 네이버지도 관련
     lazy var naverMapView = NMFMapView(frame: view.frame)
     
@@ -79,7 +82,13 @@ class HomeViewController: UIViewController {
         setConstraints()
         locationManager.delegate = self
         
+        let locationOverlay = naverMapView.locationOverlay
+        locationOverlay.hidden = true
+        locationOverlay.location = coord
+        locationOverlay.icon = NMFOverlayImage(name: "icon-location-overlay")
+        
         moveLocation()
+        
         
     }
     
@@ -110,12 +119,6 @@ class HomeViewController: UIViewController {
     
     // MARK: - Naver Map 설정
     func moveLocation() {
-
-        let locationOverlay = naverMapView.locationOverlay
-        locationOverlay.hidden = true
-        locationOverlay.location = coord
-        locationOverlay.icon = NMFOverlayImage(name: "icon-location-overlay")
-
         
         let cameraUpdate = NMFCameraUpdate(scrollTo: coord)
         cameraUpdate.animation = .easeIn
@@ -123,8 +126,16 @@ class HomeViewController: UIViewController {
         
     }
     
+    // MARK: - Marker 설정
+    func setMapMarker(_ data: GoodDeed) {
+        /// 마커
+        let marker = NMFMarker()
+        marker.iconImage = NMFOverlayImage(name: data.kind.getMarkerImage())
+        marker.captionText = data.title
+        marker.position = NMGLatLng(lat: data.lat, lng: data.lon)
+        marker.mapView = naverMapView
     
-
+    }
     
     // MARK: - UI
     
@@ -163,15 +174,25 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     /// 셀 개수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return list.count
     }
     
     /// 셀 구성
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as? HomeCollectionViewCell else { return UICollectionViewCell() }
         
+        let data = list[indexPath.item]
+        cell.configureData(data)
+        setMapMarker(data)
+        
         return cell
         
+    }
+    /// 셀 선택 시
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let data = list[indexPath.item]
+        
+        coord = NMGLatLng(lat: data.lat, lng: data.lon)
     }
     
     /// 셀 사이즈
@@ -199,6 +220,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 12
     }
+    
+    
     
 }
 

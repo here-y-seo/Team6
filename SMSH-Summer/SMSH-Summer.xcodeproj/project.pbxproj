@@ -57,6 +57,7 @@
 		3BFB189128BA0FC2008D58F0 /* makeVibrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB188828BA0FC2008D58F0 /* makeVibrate.swift */; };
 		A216DBEE28BB393200B7C9D8 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A216DBED28BB393200B7C9D8 /* AuthorizationViewController.swift */; };
 		A216DBF028BB6D5600B7C9D8 /* WriteLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A216DBEF28BB6D5600B7C9D8 /* WriteLocationVC.swift */; };
+		A2F5F04F28BB807D00E45AFF /* GoodDeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F5F04E28BB807D00E45AFF /* GoodDeed.swift */; };
 		A2F7A18328BB079E001BF532 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F7A18228BB079E001BF532 /* ListViewController.swift */; };
 		A2F7A18528BB0EAE001BF532 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F7A18428BB0EAE001BF532 /* ListCollectionViewCell.swift */; };
 		A2FD94E828BA76390039E997 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD94E728BA76390039E997 /* HomeViewController.swift */; };
@@ -120,6 +121,7 @@
 		89CBE393D29ACB4A5B940C68 /* Pods-SMSH-Summer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMSH-Summer.release.xcconfig"; path = "Target Support Files/Pods-SMSH-Summer/Pods-SMSH-Summer.release.xcconfig"; sourceTree = "<group>"; };
 		A216DBED28BB393200B7C9D8 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		A216DBEF28BB6D5600B7C9D8 /* WriteLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteLocationVC.swift; sourceTree = "<group>"; };
+		A2F5F04E28BB807D00E45AFF /* GoodDeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodDeed.swift; sourceTree = "<group>"; };
 		A2F7A18228BB079E001BF532 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		A2F7A18428BB0EAE001BF532 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		A2FD94E728BA76390039E997 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 				3BFB184528BA0F0A008D58F0 /* LaunchScreen.storyboard */,
 				3BFB184828BA0F0A008D58F0 /* Info.plist */,
 				3BFB188028BA0FC2008D58F0 /* Utils */,
+				A2F5F04C28BB803F00E45AFF /* Domain */,
 			);
 			path = "SMSH-Summer";
 			sourceTree = "<group>";
@@ -453,6 +456,22 @@
 				A216DBED28BB393200B7C9D8 /* AuthorizationViewController.swift */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		A2F5F04C28BB803F00E45AFF /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A2F5F04D28BB805F00E45AFF /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A2F5F04D28BB805F00E45AFF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A2F5F04E28BB807D00E45AFF /* GoodDeed.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A2F7A18028BB077A001BF532 /* List */ = {
@@ -650,6 +669,7 @@
 				3BFB189028BA0FC2008D58F0 /* setDefaultFont.swift in Sources */,
 				A2FD94EA28BAD5820039E997 /* HomeCollectionViewCell.swift in Sources */,
 				3BE8A0EF28BA3D2400C09CC1 /* UITableView+.swift in Sources */,
+				A2F5F04F28BB807D00E45AFF /* GoodDeed.swift in Sources */,
 				3BE8A0ED28BA3D2400C09CC1 /* UIButton+.swift in Sources */,
 				A2F7A18528BB0EAE001BF532 /* ListCollectionViewCell.swift in Sources */,
 				3B312B9528BB24D20048AA8D /* placeTVC.swift in Sources */,
