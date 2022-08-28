@@ -29,9 +29,10 @@ class typeTVC: UITableViewCell {
         layout.sectionInset = .zero
         
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = .Black
+        cv.backgroundColor = .clear
         cv.showsVerticalScrollIndicator = false
         cv.bounces = false
+        cv.register(typeCVC.self, forCellWithReuseIdentifier: typeCVC.identifier)
         
         return cv
         
@@ -66,17 +67,14 @@ extension typeTVC {
         
         typeCV.snp.makeConstraints { make in
             make.top.equalTo(typeTitle.snp.bottom).offset(16)
-            make.leading.equalToSuperview().inset(20)
+            make.bottom.equalToSuperview().inset(22)
+            make.leading.trailing.equalToSuperview().inset(20)
         }
     }
     
     private func setDelegate() {
         typeCV.delegate = self
         typeCV.dataSource = self
-    }
-    
-    func registerCell() {
-        typeCVC.register(target: typeCV)
     }
 }
 
@@ -86,11 +84,11 @@ extension typeTVC: UICollectionViewDelegate{
 
 extension typeTVC: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: typeCVC.className, for: indexPath) as? typeCVC else {return UICollectionViewCell()}
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: typeCVC.identifier, for: indexPath) as? typeCVC else {return UICollectionViewCell()}
         
         return cell
     }
@@ -98,7 +96,7 @@ extension typeTVC: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = UIScreen.main.bounds.size.width
         
-        let cellWidth = width * (48/375)
+        let cellWidth = width * (50/375)
         let cellHeight = cellWidth * (67/48)
         return CGSize(width: cellWidth, height: cellHeight)
     }

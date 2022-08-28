@@ -103,7 +103,7 @@ extension writeVC: UITableViewDataSource {
         case 0:
             return width * 0.344
         case 1:
-            return width * 0.326
+            return width * 0.38
         case 2:
             return 500
         default:
