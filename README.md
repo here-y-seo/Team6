@@ -1,4 +1,5 @@
-![header](https://user-images.githubusercontent.com/51395335/187075785-95ee9f6d-22a8-47a3-8b35-34c8b2f18095.png)
+
+![header](https://user-images.githubusercontent.com/51395335/187075808-dcc7e92b-b1c8-47f9-95f5-aa8b0a64ee52.png)
 
 
 # Team6 - 좋을지도
