@@ -27,6 +27,11 @@ class ModuleFactory: ModuleFactoryProtocol {
         return vc
     }
     
+    func Home() -> HomeViewController {
+        let vc = HomeViewController()
+        return vc
+    }
+    
     func splashVC() -> SplashVC {
         let vc = SplashVC.controllerFromStoryboard(.Splash)
         return vc
