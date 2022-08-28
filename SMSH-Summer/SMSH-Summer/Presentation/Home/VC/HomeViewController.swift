@@ -23,7 +23,7 @@ class HomeViewController: UIViewController {
     /// - 기본 좌표 : 숙대
     var coord = NMGLatLng(lat: 37.545993, lng: 126.964707) {
         didSet {
-            moveLocationAndMarker()
+            moveLocation()
         }
     }
     
@@ -79,7 +79,7 @@ class HomeViewController: UIViewController {
         setConstraints()
         locationManager.delegate = self
         
-        moveLocationAndMarker()
+        moveLocation()
         
     }
     
@@ -89,48 +89,7 @@ class HomeViewController: UIViewController {
         showRequestLocationServiceAlert()
     }
     
-    // MARK: - Naver Map 설정
-    func moveLocationAndMarker() {
-
-        let locationOverlay = naverMapView.locationOverlay
-        locationOverlay.hidden = true
-        locationOverlay.location = coord
-        locationOverlay.icon = NMFOverlayImage(name: "icon-location-overlay")
-
-        
-        let cameraUpdate = NMFCameraUpdate(scrollTo: coord)
-        cameraUpdate.animation = .easeIn
-        naverMapView.moveCamera(cameraUpdate)
-        
-        
-        
-        /// 마커
-        let marker = NMFMarker()
-        marker.iconImage = NMFOverlayImage(name: "icon-animal-mini-marker")
-        marker.captionText = "로드킬 신고"
-        marker.position = NMGLatLng(lat: 37.345993, lng: 126.864707)
-        marker.mapView = naverMapView
-        
-        let marker2 = NMFMarker()
-        marker2.iconImage = NMFOverlayImage(name: "icon-donation-mini-marker")
-        marker2.captionText = "사랑의 열매 모금"
-        marker2.position = NMGLatLng(lat: 37.545993, lng: 126.964707)
-        marker2.mapView = naverMapView
-        
-        let marker3 = NMFMarker()
-        marker3.iconImage = NMFOverlayImage(name: "icon-etc-mini-marker")
-        marker3.captionText = "청소노동자 연대서명"
-        marker3.position = NMGLatLng(lat: 37.4, lng: 126.7)
-        marker3.mapView = naverMapView
-        
-        let marker4 = NMFMarker()
-        marker4.iconImage = NMFOverlayImage(name: "icon-plogging-mini-marker")
-        marker4.captionText = "버정 쓰레기 치우기"
-        marker4.position = NMGLatLng(lat: 37.48, lng: 126.8)
-        marker4.mapView = naverMapView
-        
-
-    }
+   
     // MARK: - Actions
     private func setActions() {
         currentLocationButton.addTarget(self, action: #selector(currentLocationButtonTapped), for: .touchUpInside)
@@ -145,8 +104,27 @@ class HomeViewController: UIViewController {
         
         /// 클릭하면 현재위치 받아오기
         locationManager.startUpdatingLocation()
+        
+        
     }
     
+    // MARK: - Naver Map 설정
+    func moveLocation() {
+
+        let locationOverlay = naverMapView.locationOverlay
+        locationOverlay.hidden = true
+        locationOverlay.location = coord
+        locationOverlay.icon = NMFOverlayImage(name: "icon-location-overlay")
+
+        
+        let cameraUpdate = NMFCameraUpdate(scrollTo: coord)
+        cameraUpdate.animation = .easeIn
+        naverMapView.moveCamera(cameraUpdate)
+        
+    }
+    
+    
+
     
     // MARK: - UI
     
@@ -305,7 +283,7 @@ extension HomeViewController: CLLocationManagerDelegate {
         
         }
         
-        //locationManager.stopUpdatingLocation()
+        locationManager.stopUpdatingLocation()
         
         
     }
