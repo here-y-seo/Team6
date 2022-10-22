@@ -1,6 +1,7 @@
 PODS:
   - Kingfisher (7.3.2)
   - NMapsMap (3.15.0)
+  - PanModal (1.2.7)
   - PryntTrimmerView (4.0.2)
   - Realm (10.28.6):
     - Realm/Headers (= 10.28.6)
@@ -17,6 +18,7 @@ PODS:
 DEPENDENCIES:
   - Kingfisher (~> 7.0)
   - NMapsMap (= 3.15.0)
+  - PanModal
   - RealmSwift (~> 10)
   - SnapKit (~> 5.0.0)
   - Then
@@ -26,6 +28,7 @@ SPEC REPOS:
   trunk:
     - Kingfisher
     - NMapsMap
+    - PanModal
     - PryntTrimmerView
     - Realm
     - RealmSwift
@@ -37,6 +40,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Kingfisher: 0086ad83719761ba9b2cdaf6ef4d5b4878cbae23
   NMapsMap: f151761c088d6516064c59da03ab6503769486e6
+  PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
   PryntTrimmerView: 6a43cc90df5d99addeabd33d4ba09b1365322130
   Realm: 9b12f16a14446d7d46a9e36225d0a0332a6ec739
   RealmSwift: 5927726fce21005f43b1fb57c832297a22031bfc
@@ -45,6 +49,6 @@ SPEC CHECKSUMS:
   Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
   YPImagePicker: f36043210c10b0783034eb1947d6e06e31c461e4
 
-PODFILE CHECKSUM: 63b69cc037d6bd173ad0e16cc542dad6b82d1e22
+PODFILE CHECKSUM: 164678ee8a8d7d54bfcfd66fa494a96908415af4
 
 COCOAPODS: 1.11.3
