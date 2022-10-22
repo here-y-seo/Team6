@@ -55,6 +55,7 @@
 		3BFB188F28BA0FC2008D58F0 /* setImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB188628BA0FC2008D58F0 /* setImage.swift */; };
 		3BFB189028BA0FC2008D58F0 /* setDefaultFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB188728BA0FC2008D58F0 /* setDefaultFont.swift */; };
 		3BFB189128BA0FC2008D58F0 /* makeVibrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB188828BA0FC2008D58F0 /* makeVibrate.swift */; };
+		3F8C4A611FB0F39F3D578A6F /* Pods_SMSH_Summer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3FE230A667587BCC36881F /* Pods_SMSH_Summer.framework */; };
 		A216DBEE28BB393200B7C9D8 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A216DBED28BB393200B7C9D8 /* AuthorizationViewController.swift */; };
 		A216DBF028BB6D5600B7C9D8 /* WriteLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A216DBEF28BB6D5600B7C9D8 /* WriteLocationVC.swift */; };
 		A2F5F04F28BB807D00E45AFF /* GoodDeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F5F04E28BB807D00E45AFF /* GoodDeed.swift */; };
@@ -62,7 +63,6 @@
 		A2F7A18528BB0EAE001BF532 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F7A18428BB0EAE001BF532 /* ListCollectionViewCell.swift */; };
 		A2FD94E828BA76390039E997 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD94E728BA76390039E997 /* HomeViewController.swift */; };
 		A2FD94EA28BAD5820039E997 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD94E928BAD5820039E997 /* HomeCollectionViewCell.swift */; };
-		B1D961B4B41800ECBDCCD436 /* Pods_SMSH_Summer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802077A4D47A5295C555D216 /* Pods_SMSH_Summer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,9 +116,7 @@
 		3BFB188628BA0FC2008D58F0 /* setImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setImage.swift; sourceTree = "<group>"; };
 		3BFB188728BA0FC2008D58F0 /* setDefaultFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setDefaultFont.swift; sourceTree = "<group>"; };
 		3BFB188828BA0FC2008D58F0 /* makeVibrate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = makeVibrate.swift; sourceTree = "<group>"; };
-		4F39F37E61C8BF30F1BA36FB /* Pods-SMSH-Summer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMSH-Summer.debug.xcconfig"; path = "Target Support Files/Pods-SMSH-Summer/Pods-SMSH-Summer.debug.xcconfig"; sourceTree = "<group>"; };
-		802077A4D47A5295C555D216 /* Pods_SMSH_Summer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMSH_Summer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		89CBE393D29ACB4A5B940C68 /* Pods-SMSH-Summer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMSH-Summer.release.xcconfig"; path = "Target Support Files/Pods-SMSH-Summer/Pods-SMSH-Summer.release.xcconfig"; sourceTree = "<group>"; };
+		903F9422565F5D3641226911 /* Pods-SMSH-Summer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMSH-Summer.debug.xcconfig"; path = "Target Support Files/Pods-SMSH-Summer/Pods-SMSH-Summer.debug.xcconfig"; sourceTree = "<group>"; };
 		A216DBED28BB393200B7C9D8 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		A216DBEF28BB6D5600B7C9D8 /* WriteLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteLocationVC.swift; sourceTree = "<group>"; };
 		A2F5F04E28BB807D00E45AFF /* GoodDeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodDeed.swift; sourceTree = "<group>"; };
@@ -126,6 +124,8 @@
 		A2F7A18428BB0EAE001BF532 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		A2FD94E728BA76390039E997 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A2FD94E928BAD5820039E997 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		A69A9DF13B037FD9B09AAF61 /* Pods-SMSH-Summer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMSH-Summer.release.xcconfig"; path = "Target Support Files/Pods-SMSH-Summer/Pods-SMSH-Summer.release.xcconfig"; sourceTree = "<group>"; };
+		DF3FE230A667587BCC36881F /* Pods_SMSH_Summer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMSH_Summer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1D961B4B41800ECBDCCD436 /* Pods_SMSH_Summer.framework in Frameworks */,
+				3F8C4A611FB0F39F3D578A6F /* Pods_SMSH_Summer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,10 +143,18 @@
 		03539969409DD99BFC389B89 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4F39F37E61C8BF30F1BA36FB /* Pods-SMSH-Summer.debug.xcconfig */,
-				89CBE393D29ACB4A5B940C68 /* Pods-SMSH-Summer.release.xcconfig */,
+				903F9422565F5D3641226911 /* Pods-SMSH-Summer.debug.xcconfig */,
+				A69A9DF13B037FD9B09AAF61 /* Pods-SMSH-Summer.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		24C2C218DB3BA0B37635BCD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF3FE230A667587BCC36881F /* Pods_SMSH_Summer.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		3B312B8328BAFE010048AA8D /* WriteView */ = {
@@ -288,7 +296,7 @@
 				3BFB183928BA0F09008D58F0 /* SMSH-Summer */,
 				3BFB183828BA0F09008D58F0 /* Products */,
 				03539969409DD99BFC389B89 /* Pods */,
-				B122CA4EB40B1ED992937D7D /* Frameworks */,
+				24C2C218DB3BA0B37635BCD9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -526,14 +534,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		B122CA4EB40B1ED992937D7D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				802077A4D47A5295C555D216 /* Pods_SMSH_Summer.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -541,11 +541,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BFB184B28BA0F0A008D58F0 /* Build configuration list for PBXNativeTarget "SMSH-Summer" */;
 			buildPhases = (
-				E37AF8B3B6484B03B0754747 /* [CP] Check Pods Manifest.lock */,
+				ADC1202910A89F82E2AE4284 /* [CP] Check Pods Manifest.lock */,
 				3BFB183328BA0F09008D58F0 /* Sources */,
 				3BFB183428BA0F09008D58F0 /* Frameworks */,
 				3BFB183528BA0F09008D58F0 /* Resources */,
-				D4B2624C87B6740980ED9F28 /* [CP] Embed Pods Frameworks */,
+				5813303592330C8AF3E6339C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -573,7 +573,7 @@
 			};
 			buildConfigurationList = 3BFB183228BA0F09008D58F0 /* Build configuration list for PBXProject "SMSH-Summer" */;
 			compatibilityVersion = "Xcode 13.0";
-			developmentRegion = en;
+			developmentRegion = ko;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -611,7 +611,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D4B2624C87B6740980ED9F28 /* [CP] Embed Pods Frameworks */ = {
+		5813303592330C8AF3E6339C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -628,7 +628,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SMSH-Summer/Pods-SMSH-Summer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E37AF8B3B6484B03B0754747 /* [CP] Check Pods Manifest.lock */ = {
+		ADC1202910A89F82E2AE4284 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -776,7 +776,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -830,7 +830,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -842,7 +842,7 @@
 		};
 		3BFB184C28BA0F0A008D58F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F39F37E61C8BF30F1BA36FB /* Pods-SMSH-Summer.debug.xcconfig */;
+			baseConfigurationReference = 903F9422565F5D3641226911 /* Pods-SMSH-Summer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -861,8 +861,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -873,13 +874,13 @@
 				PROVISIONING_PROFILE_SPECIFIER = YSEO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		3BFB184D28BA0F0A008D58F0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89CBE393D29ACB4A5B940C68 /* Pods-SMSH-Summer.release.xcconfig */;
+			baseConfigurationReference = A69A9DF13B037FD9B09AAF61 /* Pods-SMSH-Summer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -898,8 +899,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -910,7 +912,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = YSEO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
