@@ -853,6 +853,7 @@
 				DEVELOPMENT_TEAM = F7B353LPM3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SMSH-Summer/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "좋을지도";
 				INFOPLIST_KEY_NSCameraUsageDescription = "카메라에서 사진을 촬영해 선행 내용에 추가하기 위해 권한이 필요합니다.";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "사용자의 현재 위치 주변의 선행 내역을 보여주고, 현재 위치로 선행 기록을 하기 위해서 권한이 필요합니다.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "사용자의 현재 위치 주변의 선행 내역을 보여주고, 현재 위치로 선행 기록을 하기 위해서 권한이 필요합니다.";
@@ -864,6 +865,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -891,6 +893,7 @@
 				DEVELOPMENT_TEAM = F7B353LPM3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SMSH-Summer/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "좋을지도";
 				INFOPLIST_KEY_NSCameraUsageDescription = "카메라에서 사진을 촬영해 선행 내용에 추가하기 위해 권한이 필요합니다.";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "사용자의 현재 위치 주변의 선행 내역을 보여주고, 현재 위치로 선행 기록을 하기 위해서 권한이 필요합니다.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "사용자의 현재 위치 주변의 선행 내역을 보여주고, 현재 위치로 선행 기록을 하기 위해서 권한이 필요합니다.";
@@ -902,6 +905,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
