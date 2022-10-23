@@ -7,6 +7,12 @@
 
 import UIKit
 
+enum WriteSection: Int, CaseIterable {
+    case place = 0
+    case typekind
+    case content
+}
+
 class writeVC: UIViewController {
 
     // MARK: - UI Components
@@ -81,7 +87,7 @@ extension writeVC: UITableViewDelegate {
 extension writeVC: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return WriteSection.allCases.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -90,13 +96,13 @@ extension writeVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
-        case 0:
+        case WriteSection.place.rawValue:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: placeTVC.identifier, for: indexPath) as? placeTVC else { return UITableViewCell() }
             return cell
-        case 1:
+        case WriteSection.typekind.rawValue:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: typeTVC.identifier, for: indexPath) as? typeTVC else { return UITableViewCell() }
             return cell
-        case 2:
+        case WriteSection.content.rawValue:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: contentTVC.identifier, for: indexPath) as? contentTVC else { return UITableViewCell() }
             return cell
         default:
@@ -108,11 +114,11 @@ extension writeVC: UITableViewDataSource {
         let width = UIScreen.main.bounds.size.width
         
         switch indexPath.section {
-        case 0:
+        case WriteSection.place.rawValue:
             return width * 0.344
-        case 1:
+        case WriteSection.typekind.rawValue:
             return width * 0.38
-        case 2:
+        case WriteSection.content.rawValue:
             return 500
         default:
             return 200
