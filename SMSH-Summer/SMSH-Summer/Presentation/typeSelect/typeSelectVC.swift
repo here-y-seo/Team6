@@ -6,19 +6,15 @@
 //
 
 import UIKit
+import PanModal
 
 class typeSelectVC: UIViewController {
 
     // MARK: - Properties
     private var typeBtn: [UIButton] = []
+    // var delegate: SelectedTypeProtocol?
     
     // MARK: - UI Components
-    private let typeSelectView = UIView().then {
-        $0.backgroundColor = .white
-        $0.layer.cornerRadius = 20
-        $0.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-    }
-    
     private let selectTitleLabel = UILabel().then {
         $0.text = "종류선택"
         $0.textColor = .Black
@@ -27,9 +23,9 @@ class typeSelectVC: UIViewController {
     
     private let btnStackView = UIStackView().then {
         $0.axis = .horizontal
-        $0.spacing = 24
-        $0.distribution = .fillEqually
-        $0.alignment = .leading
+        $0.spacing = 12
+        $0.distribution = .equalSpacing
+        $0.alignment = .center
     }
     
     private let ploggingBtn = UIButton().then {
@@ -80,37 +76,49 @@ class typeSelectVC: UIViewController {
 
 extension typeSelectVC {
     private func setUI() {
-        self.view.backgroundColor = .clear.withAlphaComponent(60)
+        view.backgroundColor = .white
+        typeBtn = [ploggingBtn, animalBtn,
+                   donationBtn, volunteerBtn, etcBtn]
     }
     
     private func setStackView() {
-        btnStackView.addArrangedSubviews(ploggingBtn, animalBtn,
-                                         donationBtn, volunteerBtn, etcBtn)
+        view.addSubviews(selectTitleLabel, btnStackView, selectBtn)
+        typeBtn.forEach {
+            btnStackView.addArrangedSubviews($0)
+        }
     }
     
     private func setLayout() {
-        view.addSubviews(typeSelectView)
-        typeSelectView.addSubviews(selectTitleLabel, btnStackView, selectBtn)
-        
-        typeSelectView.snp.makeConstraints { make in
-            make.height.equalToSuperview().multipliedBy(0.31)
-            make.leading.trailing.equalToSuperview()
-            make.width.bottom.equalToSuperview()
-        }
-        
+
         selectTitleLabel.snp.makeConstraints { make in
-            make.top.leading.equalToSuperview().inset(20)
-            make.trailing.equalToSuperview().inset(295)
+            make.leading.equalToSuperview().inset(20)
+            make.top.equalToSuperview().inset(24)
         }
+        
         btnStackView.snp.makeConstraints { make in
             make.top.equalTo(selectTitleLabel.snp.bottom).offset(17)
             make.leading.trailing.equalToSuperview().inset(18)
         }
         selectBtn.snp.makeConstraints { make in
-            make.top.equalTo(btnStackView.snp.bottom).offset(30)
-            make.bottom.equalToSuperview().inset(50)
-            make.leading.trailing.equalToSuperview().inset(19)
+            make.top.greaterThanOrEqualTo(btnStackView.snp.bottom).offset(24)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(12)
+            make.height.equalTo(48)
+            make.leading.trailing.equalToSuperview().inset(20)
         }
+    }
+    
+}
+
+// MARK: - Pan Modal
+extension typeSelectVC: PanModalPresentable {
+    var panScrollable: UIScrollView? {
+        return nil
+    }
+    var shortFormHeight: PanModalHeight {
+        return .contentHeight(220)
+    }
+    var longFormHeight: PanModalHeight {
+        return .contentHeight(220)
     }
     
 }

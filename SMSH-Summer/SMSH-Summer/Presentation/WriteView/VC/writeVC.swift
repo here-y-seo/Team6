@@ -64,7 +64,9 @@ extension writeVC {
     
     // MARK: - Actions
     @objc func dismissButtonTapped(_ sender: UIBarButtonItem) {
-        self.navigationController?.popViewController(animated: true)
+        //self.navigationController?.popViewController(animated: true)
+        let vc = typeSelectVC()
+        self.presentPanModal(vc)
     }
     
     @objc func saveButtonTapped(_ sender: UIBarButtonItem) {
