@@ -58,6 +58,7 @@
 		3F8C4A611FB0F39F3D578A6F /* Pods_SMSH_Summer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3FE230A667587BCC36881F /* Pods_SMSH_Summer.framework */; };
 		A216DBEE28BB393200B7C9D8 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A216DBED28BB393200B7C9D8 /* AuthorizationViewController.swift */; };
 		A216DBF028BB6D5600B7C9D8 /* WriteLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A216DBEF28BB6D5600B7C9D8 /* WriteLocationVC.swift */; };
+		A2B3136C29085150006365EE /* GoodDeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B3136B29085150006365EE /* GoodDeedModel.swift */; };
 		A2F5F04F28BB807D00E45AFF /* GoodDeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F5F04E28BB807D00E45AFF /* GoodDeed.swift */; };
 		A2F7A18328BB079E001BF532 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F7A18228BB079E001BF532 /* ListViewController.swift */; };
 		A2F7A18528BB0EAE001BF532 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F7A18428BB0EAE001BF532 /* ListCollectionViewCell.swift */; };
@@ -119,6 +120,7 @@
 		903F9422565F5D3641226911 /* Pods-SMSH-Summer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMSH-Summer.debug.xcconfig"; path = "Target Support Files/Pods-SMSH-Summer/Pods-SMSH-Summer.debug.xcconfig"; sourceTree = "<group>"; };
 		A216DBED28BB393200B7C9D8 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		A216DBEF28BB6D5600B7C9D8 /* WriteLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteLocationVC.swift; sourceTree = "<group>"; };
+		A2B3136B29085150006365EE /* GoodDeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodDeedModel.swift; sourceTree = "<group>"; };
 		A2F5F04E28BB807D00E45AFF /* GoodDeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodDeed.swift; sourceTree = "<group>"; };
 		A2F7A18228BB079E001BF532 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		A2F7A18428BB0EAE001BF532 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -478,6 +480,7 @@
 			isa = PBXGroup;
 			children = (
 				A2F5F04E28BB807D00E45AFF /* GoodDeed.swift */,
+				A2B3136B29085150006365EE /* GoodDeedModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -666,6 +669,7 @@
 				3BFB187D28BA0F80008D58F0 /* UICollectionViewRegisterable.swift in Sources */,
 				A2F7A18328BB079E001BF532 /* ListViewController.swift in Sources */,
 				A2FD94E828BA76390039E997 /* HomeViewController.swift in Sources */,
+				A2B3136C29085150006365EE /* GoodDeedModel.swift in Sources */,
 				3BFB188E28BA0FC2008D58F0 /* getClassName.swift in Sources */,
 				3BFB189028BA0FC2008D58F0 /* setDefaultFont.swift in Sources */,
 				A2FD94EA28BAD5820039E997 /* HomeCollectionViewCell.swift in Sources */,
