@@ -59,6 +59,7 @@
 		A216DBEE28BB393200B7C9D8 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A216DBED28BB393200B7C9D8 /* AuthorizationViewController.swift */; };
 		A216DBF028BB6D5600B7C9D8 /* WriteLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A216DBEF28BB6D5600B7C9D8 /* WriteLocationVC.swift */; };
 		A2B3136C29085150006365EE /* GoodDeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B3136B29085150006365EE /* GoodDeedModel.swift */; };
+		A2B3136E290854A2006365EE /* GoodDeedRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B3136D290854A2006365EE /* GoodDeedRepository.swift */; };
 		A2F5F04F28BB807D00E45AFF /* GoodDeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F5F04E28BB807D00E45AFF /* GoodDeed.swift */; };
 		A2F7A18328BB079E001BF532 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F7A18228BB079E001BF532 /* ListViewController.swift */; };
 		A2F7A18528BB0EAE001BF532 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F7A18428BB0EAE001BF532 /* ListCollectionViewCell.swift */; };
@@ -121,6 +122,7 @@
 		A216DBED28BB393200B7C9D8 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		A216DBEF28BB6D5600B7C9D8 /* WriteLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteLocationVC.swift; sourceTree = "<group>"; };
 		A2B3136B29085150006365EE /* GoodDeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodDeedModel.swift; sourceTree = "<group>"; };
+		A2B3136D290854A2006365EE /* GoodDeedRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodDeedRepository.swift; sourceTree = "<group>"; };
 		A2F5F04E28BB807D00E45AFF /* GoodDeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodDeed.swift; sourceTree = "<group>"; };
 		A2F7A18228BB079E001BF532 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		A2F7A18428BB0EAE001BF532 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -481,6 +483,7 @@
 			children = (
 				A2F5F04E28BB807D00E45AFF /* GoodDeed.swift */,
 				A2B3136B29085150006365EE /* GoodDeedModel.swift */,
+				A2B3136D290854A2006365EE /* GoodDeedRepository.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -703,6 +706,7 @@
 				3BE8A0D528BA380300C09CC1 /* ModuleFactory.swift in Sources */,
 				3BFB189128BA0FC2008D58F0 /* makeVibrate.swift in Sources */,
 				3BE8A0F228BA3D2400C09CC1 /* String+.swift in Sources */,
+				A2B3136E290854A2006365EE /* GoodDeedRepository.swift in Sources */,
 				3BE8A0EB28BA3D2400C09CC1 /* UIStackView+.swift in Sources */,
 				3BFB183D28BA0F09008D58F0 /* SceneDelegate.swift in Sources */,
 				3BFB188C28BA0FC2008D58F0 /* applyShadow.swift in Sources */,
