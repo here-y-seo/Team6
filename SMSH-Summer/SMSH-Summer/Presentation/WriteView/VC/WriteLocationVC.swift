@@ -17,10 +17,15 @@ class WriteLocationVC: UIViewController {
     /// 네이버지도 관련
     lazy var naverMapView = NMFMapView(frame: view.frame)
     
-    /// - 기본 좌표 : 숙대
+    /// 기본 좌표 : 숙대
     var coord = NMGLatLng(lat: 37.545993, lng: 126.964707) {
         didSet {
             moveLocation()
+        }
+    }
+    var location: String = "" {
+        didSet {
+            addressLabel.text = location
         }
     }
     
@@ -58,15 +63,17 @@ class WriteLocationVC: UIViewController {
     /// 주소텍스트
     let addressLabel = UILabel().then {
         $0.font = .AppleSDGothicNeoMedium(ofSize: 16)
+        $0.minimumScaleFactor = 0.8
+        $0.adjustsFontSizeToFitWidth = true
         $0.textColor = .Black
-        $0.text = "서울시 문정1동 363"
+        $0.text = "원하는 위치를 선택해주세요"
         $0.textAlignment = .center
     }
     
     /// 온라인 버튼
     let onlineButton = UIButton().then {
         $0.backgroundColor = .white
-        $0.tintColor = .DarkGray
+        $0.setTitleColor(.darkGray, for: .normal)
         $0.setTitle("온라인으로 했어요", for: .normal)
         $0.titleLabel?.font = .AppleSDGothicNeoSemiBold(ofSize: 14)
 
@@ -99,6 +106,7 @@ class WriteLocationVC: UIViewController {
         self.navigationItem.title = "등록하기"
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(dismissButtonTapped(_:)))
         
+        onlineButton.addTarget(self, action: #selector(onlineButtonTapped), for: .touchUpInside)
         didHereButton.addTarget(self, action: #selector(goNextWritePageButtonTapped), for: .touchUpInside)
     }
     
@@ -112,7 +120,11 @@ class WriteLocationVC: UIViewController {
         let vc = writeVC()
         self.navigationController?.pushViewController(vc, animated: true)
     }
-
+    
+    @objc func onlineButtonTapped(_ sender: UIButton) {
+        location = "온라인"
+    }
+    
     // MARK: - Naver Map 설정
     func moveLocation() {
 
@@ -131,7 +143,7 @@ class WriteLocationVC: UIViewController {
     // MARK: - Helpers
     func setLayout() {
         view.addSubviews(naverMapView, currentLocationButton, layupView)
-        layupView.addSubviews(titleLabel, addressLabelBaseView, onlineButton, didHereButton)
+        layupView.addSubviews(titleLabel, addressLabelBaseView, onlineButton, didHereButton, onlineButton)
         addressLabelBaseView.addSubviews(addressLabel)
     }
     
@@ -154,34 +166,32 @@ class WriteLocationVC: UIViewController {
         }
         
         titleLabel.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(20)
-            make.top.equalToSuperview().offset(24)
+            make.leading.equalToSuperview().inset(20)
+            make.top.equalToSuperview().inset(24)
             
         }
         addressLabelBaseView.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
+            make.leading.trailing.equalToSuperview().inset(20)
             make.height.equalTo(60)
             make.top.equalTo(titleLabel.snp.bottom).offset(24)
         }
         
         addressLabel.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
+            make.leading.trailing.equalToSuperview().inset(20)
             make.centerX.centerY.equalToSuperview()
             
         }
         
-        onlineButton.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
-            make.top.equalTo(addressLabelBaseView.snp.bottom).offset(24)
-            make.height.equalTo(48)
-        }
         didHereButton.snp.makeConstraints { make in
-            make.leading.trailing.height.equalTo(onlineButton)
-            make.top.equalTo(onlineButton.snp.bottom)
+            make.leading.trailing.equalTo(onlineButton)
+            make.height.equalTo(54)
+            make.bottom.equalTo(view.safeAreaLayoutGuide)
             
+        }
+        onlineButton.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(20)
+            make.bottom.equalTo(didHereButton.snp.top).offset(-10)
+            make.height.equalTo(44)
         }
         
     }
@@ -216,6 +226,12 @@ extension WriteLocationVC: NMFMapViewTouchDelegate {
         print("\(latlng.lat), \(latlng.lng)")
         coord = latlng
         
-        addressLabel.text = "\(latlng)"
+        GeocodingManager.shared.callReversedGeocoding(lon: "\(latlng.lng)", lat: "\(latlng.lat)", completionHandler: { address in
+            DispatchQueue.main.async {
+                
+                self.location = address
+            }
+        })
+
     }
 }
