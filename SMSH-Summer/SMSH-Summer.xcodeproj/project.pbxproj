@@ -55,10 +55,12 @@
 		3BFB188F28BA0FC2008D58F0 /* setImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB188628BA0FC2008D58F0 /* setImage.swift */; };
 		3BFB189028BA0FC2008D58F0 /* setDefaultFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB188728BA0FC2008D58F0 /* setDefaultFont.swift */; };
 		3BFB189128BA0FC2008D58F0 /* makeVibrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB188828BA0FC2008D58F0 /* makeVibrate.swift */; };
-		3F8C4A611FB0F39F3D578A6F /* Pods_SMSH_Summer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3FE230A667587BCC36881F /* Pods_SMSH_Summer.framework */; };
+		832529B68A439EA92A2C6E3A /* Pods_SMSH_Summer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE6697558D97BF6D266E4C7 /* Pods_SMSH_Summer.framework */; };
 		A216DBEE28BB393200B7C9D8 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A216DBED28BB393200B7C9D8 /* AuthorizationViewController.swift */; };
 		A216DBF028BB6D5600B7C9D8 /* WriteLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A216DBEF28BB6D5600B7C9D8 /* WriteLocationVC.swift */; };
 		A237D299290EBB1700A1497F /* GeocodingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A237D298290EBB1700A1497F /* GeocodingManager.swift */; };
+		A237D29B290EBC5B00A1497F /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A237D29A290EBC5B00A1497F /* Keys.swift */; };
+		A237D29D290EBF9000A1497F /* ReversedGeocoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A237D29C290EBF9000A1497F /* ReversedGeocoding.swift */; };
 		A2B3136C29085150006365EE /* GoodDeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B3136B29085150006365EE /* GoodDeedModel.swift */; };
 		A2B3136E290854A2006365EE /* GoodDeedRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B3136D290854A2006365EE /* GoodDeedRepository.swift */; };
 		A2F5F04F28BB807D00E45AFF /* GoodDeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F5F04E28BB807D00E45AFF /* GoodDeed.swift */; };
@@ -69,6 +71,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1BE6697558D97BF6D266E4C7 /* Pods_SMSH_Summer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMSH_Summer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B312B8528BAFE250048AA8D /* WriteView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WriteView.storyboard; sourceTree = "<group>"; };
 		3B312B8728BAFE320048AA8D /* writeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = writeVC.swift; sourceTree = "<group>"; };
 		3B312B9428BB24D20048AA8D /* placeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = placeTVC.swift; sourceTree = "<group>"; };
@@ -119,10 +122,13 @@
 		3BFB188628BA0FC2008D58F0 /* setImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setImage.swift; sourceTree = "<group>"; };
 		3BFB188728BA0FC2008D58F0 /* setDefaultFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setDefaultFont.swift; sourceTree = "<group>"; };
 		3BFB188828BA0FC2008D58F0 /* makeVibrate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = makeVibrate.swift; sourceTree = "<group>"; };
-		903F9422565F5D3641226911 /* Pods-SMSH-Summer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMSH-Summer.debug.xcconfig"; path = "Target Support Files/Pods-SMSH-Summer/Pods-SMSH-Summer.debug.xcconfig"; sourceTree = "<group>"; };
+		408340F2E9B81A13340AAF8F /* Pods-SMSH-Summer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMSH-Summer.debug.xcconfig"; path = "Target Support Files/Pods-SMSH-Summer/Pods-SMSH-Summer.debug.xcconfig"; sourceTree = "<group>"; };
+		585E5556F720FC7210A43C14 /* Pods-SMSH-Summer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMSH-Summer.release.xcconfig"; path = "Target Support Files/Pods-SMSH-Summer/Pods-SMSH-Summer.release.xcconfig"; sourceTree = "<group>"; };
 		A216DBED28BB393200B7C9D8 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		A216DBEF28BB6D5600B7C9D8 /* WriteLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteLocationVC.swift; sourceTree = "<group>"; };
 		A237D298290EBB1700A1497F /* GeocodingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingManager.swift; sourceTree = "<group>"; };
+		A237D29A290EBC5B00A1497F /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		A237D29C290EBF9000A1497F /* ReversedGeocoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversedGeocoding.swift; sourceTree = "<group>"; };
 		A2B3136B29085150006365EE /* GoodDeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodDeedModel.swift; sourceTree = "<group>"; };
 		A2B3136D290854A2006365EE /* GoodDeedRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodDeedRepository.swift; sourceTree = "<group>"; };
 		A2F5F04E28BB807D00E45AFF /* GoodDeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodDeed.swift; sourceTree = "<group>"; };
@@ -130,8 +136,6 @@
 		A2F7A18428BB0EAE001BF532 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		A2FD94E728BA76390039E997 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A2FD94E928BAD5820039E997 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
-		A69A9DF13B037FD9B09AAF61 /* Pods-SMSH-Summer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMSH-Summer.release.xcconfig"; path = "Target Support Files/Pods-SMSH-Summer/Pods-SMSH-Summer.release.xcconfig"; sourceTree = "<group>"; };
-		DF3FE230A667587BCC36881F /* Pods_SMSH_Summer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMSH_Summer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F8C4A611FB0F39F3D578A6F /* Pods_SMSH_Summer.framework in Frameworks */,
+				832529B68A439EA92A2C6E3A /* Pods_SMSH_Summer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,18 +153,10 @@
 		03539969409DD99BFC389B89 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				903F9422565F5D3641226911 /* Pods-SMSH-Summer.debug.xcconfig */,
-				A69A9DF13B037FD9B09AAF61 /* Pods-SMSH-Summer.release.xcconfig */,
+				408340F2E9B81A13340AAF8F /* Pods-SMSH-Summer.debug.xcconfig */,
+				585E5556F720FC7210A43C14 /* Pods-SMSH-Summer.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		24C2C218DB3BA0B37635BCD9 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				DF3FE230A667587BCC36881F /* Pods_SMSH_Summer.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		3B312B8328BAFE010048AA8D /* WriteView */ = {
@@ -302,7 +298,7 @@
 				3BFB183928BA0F09008D58F0 /* SMSH-Summer */,
 				3BFB183828BA0F09008D58F0 /* Products */,
 				03539969409DD99BFC389B89 /* Pods */,
-				24C2C218DB3BA0B37635BCD9 /* Frameworks */,
+				3C02D3300B027AB7B1770D4D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -457,6 +453,14 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		3C02D3300B027AB7B1770D4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1BE6697558D97BF6D266E4C7 /* Pods_SMSH_Summer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A216DBEB28BB38FD00B7C9D8 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
@@ -485,6 +489,8 @@
 			isa = PBXGroup;
 			children = (
 				A237D298290EBB1700A1497F /* GeocodingManager.swift */,
+				A237D29C290EBF9000A1497F /* ReversedGeocoding.swift */,
+				A237D29A290EBC5B00A1497F /* Keys.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -566,11 +572,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BFB184B28BA0F0A008D58F0 /* Build configuration list for PBXNativeTarget "SMSH-Summer" */;
 			buildPhases = (
-				ADC1202910A89F82E2AE4284 /* [CP] Check Pods Manifest.lock */,
+				364E9B2E2880A63C1D818CE0 /* [CP] Check Pods Manifest.lock */,
 				3BFB183328BA0F09008D58F0 /* Sources */,
 				3BFB183428BA0F09008D58F0 /* Frameworks */,
 				3BFB183528BA0F09008D58F0 /* Resources */,
-				5813303592330C8AF3E6339C /* [CP] Embed Pods Frameworks */,
+				768220AE716DF5E729CAFFD3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -637,24 +643,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5813303592330C8AF3E6339C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SMSH-Summer/Pods-SMSH-Summer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SMSH-Summer/Pods-SMSH-Summer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SMSH-Summer/Pods-SMSH-Summer-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ADC1202910A89F82E2AE4284 /* [CP] Check Pods Manifest.lock */ = {
+		364E9B2E2880A63C1D818CE0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -676,6 +665,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		768220AE716DF5E729CAFFD3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SMSH-Summer/Pods-SMSH-Summer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SMSH-Summer/Pods-SMSH-Summer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SMSH-Summer/Pods-SMSH-Summer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -684,6 +690,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BE8A0D128BA37B200C09CC1 /* StoryboardLiterals.swift in Sources */,
+				A237D29B290EBC5B00A1497F /* Keys.swift in Sources */,
 				3BE8A0E828BA3D2400C09CC1 /* UITextView++.swift in Sources */,
 				3BFB183F28BA0F09008D58F0 /* ViewController.swift in Sources */,
 				3B312B9928BB260D0048AA8D /* contentTVC.swift in Sources */,
@@ -697,6 +704,7 @@
 				A2FD94EA28BAD5820039E997 /* HomeCollectionViewCell.swift in Sources */,
 				3BE8A0EF28BA3D2400C09CC1 /* UITableView+.swift in Sources */,
 				A2F5F04F28BB807D00E45AFF /* GoodDeed.swift in Sources */,
+				A237D29D290EBF9000A1497F /* ReversedGeocoding.swift in Sources */,
 				3BE8A0ED28BA3D2400C09CC1 /* UIButton+.swift in Sources */,
 				A2F7A18528BB0EAE001BF532 /* ListCollectionViewCell.swift in Sources */,
 				3B312B9528BB24D20048AA8D /* placeTVC.swift in Sources */,
@@ -871,7 +879,7 @@
 		};
 		3BFB184C28BA0F0A008D58F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 903F9422565F5D3641226911 /* Pods-SMSH-Summer.debug.xcconfig */;
+			baseConfigurationReference = 408340F2E9B81A13340AAF8F /* Pods-SMSH-Summer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -911,7 +919,7 @@
 		};
 		3BFB184D28BA0F0A008D58F0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A69A9DF13B037FD9B09AAF61 /* Pods-SMSH-Summer.release.xcconfig */;
+			baseConfigurationReference = 585E5556F720FC7210A43C14 /* Pods-SMSH-Summer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
