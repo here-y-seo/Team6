@@ -23,6 +23,17 @@ enum SettingInfo: Int, CaseIterable {
             return "오픈소스 라이선스"
         }
     }
+    
+    func getImage() -> String {
+        switch self {
+        case .VersionInfo:
+            return "info.circle.fill"
+        case .EmailFeedback:
+            return "envelope.open.fill"
+        case .OpensourceLicense:
+            return "quote.opening"
+        }
+    }
 }
 
 final class SettingViewController: UIViewController {
@@ -92,9 +103,11 @@ extension SettingViewController {
                     content.secondaryText = version
                 }
             }
+            content.image = UIImage(systemName: itemIdentifier.getImage())
+            content.imageProperties.tintColor = .primaryColor
             
             content.prefersSideBySideTextAndSecondaryText = true
-
+            
             cell.contentConfiguration = content
         }
         
