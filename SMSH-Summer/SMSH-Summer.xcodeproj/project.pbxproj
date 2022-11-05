@@ -61,6 +61,8 @@
 		A237D299290EBB1700A1497F /* GeocodingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A237D298290EBB1700A1497F /* GeocodingManager.swift */; };
 		A237D29B290EBC5B00A1497F /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A237D29A290EBC5B00A1497F /* Keys.swift */; };
 		A237D29D290EBF9000A1497F /* ReversedGeocoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A237D29C290EBF9000A1497F /* ReversedGeocoding.swift */; };
+		A2A36F4F2916A3D700EAAB83 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A36F4E2916A3D700EAAB83 /* SettingView.swift */; };
+		A2A36F512916A45800EAAB83 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A36F502916A45800EAAB83 /* SettingViewController.swift */; };
 		A2B3136C29085150006365EE /* GoodDeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B3136B29085150006365EE /* GoodDeedModel.swift */; };
 		A2B3136E290854A2006365EE /* GoodDeedRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B3136D290854A2006365EE /* GoodDeedRepository.swift */; };
 		A2F5F04F28BB807D00E45AFF /* GoodDeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F5F04E28BB807D00E45AFF /* GoodDeed.swift */; };
@@ -129,6 +131,8 @@
 		A237D298290EBB1700A1497F /* GeocodingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingManager.swift; sourceTree = "<group>"; };
 		A237D29A290EBC5B00A1497F /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		A237D29C290EBF9000A1497F /* ReversedGeocoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversedGeocoding.swift; sourceTree = "<group>"; };
+		A2A36F4E2916A3D700EAAB83 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		A2A36F502916A45800EAAB83 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		A2B3136B29085150006365EE /* GoodDeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodDeedModel.swift; sourceTree = "<group>"; };
 		A2B3136D290854A2006365EE /* GoodDeedRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodDeedRepository.swift; sourceTree = "<group>"; };
 		A2F5F04E28BB807D00E45AFF /* GoodDeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodDeed.swift; sourceTree = "<group>"; };
@@ -394,8 +398,9 @@
 		3BFB187F28BA0F9A008D58F0 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				3BEFD8C028BB80CA00011AEB /* typeSelect */,
 				3BEFD8A928BB658600011AEB /* TabBar */,
+				A2A36F4D2916A3B100EAAB83 /* Setting */,
+				3BEFD8C028BB80CA00011AEB /* typeSelect */,
 				A216DBEB28BB38FD00B7C9D8 /* Authorization */,
 				A2F7A18028BB077A001BF532 /* List */,
 				3B312B8328BAFE010048AA8D /* WriteView */,
@@ -493,6 +498,15 @@
 				A237D29A290EBC5B00A1497F /* Keys.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		A2A36F4D2916A3B100EAAB83 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				A2A36F4E2916A3D700EAAB83 /* SettingView.swift */,
+				A2A36F502916A45800EAAB83 /* SettingViewController.swift */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		A2F5F04C28BB803F00E45AFF /* Domain */ = {
@@ -694,6 +708,7 @@
 				3BE8A0E828BA3D2400C09CC1 /* UITextView++.swift in Sources */,
 				3BFB183F28BA0F09008D58F0 /* ViewController.swift in Sources */,
 				3B312B9928BB260D0048AA8D /* contentTVC.swift in Sources */,
+				A2A36F512916A45800EAAB83 /* SettingViewController.swift in Sources */,
 				3BE8A0E928BA3D2400C09CC1 /* UITabBar+.swift in Sources */,
 				3BFB187D28BA0F80008D58F0 /* UICollectionViewRegisterable.swift in Sources */,
 				A2F7A18328BB079E001BF532 /* ListViewController.swift in Sources */,
@@ -720,6 +735,7 @@
 				3BEFD8C428BB80E700011AEB /* typeSelectVC.swift in Sources */,
 				A237D299290EBB1700A1497F /* GeocodingManager.swift in Sources */,
 				3BEFD8A828BB421200011AEB /* typeCVC.swift in Sources */,
+				A2A36F4F2916A3D700EAAB83 /* SettingView.swift in Sources */,
 				3BE8A0F028BA3D2400C09CC1 /* UITextFeild+.swift in Sources */,
 				3BFB187028BA0F80008D58F0 /* ImageLiterals.swift in Sources */,
 				3B312B9728BB25FD0048AA8D /* typeTVC.swift in Sources */,
