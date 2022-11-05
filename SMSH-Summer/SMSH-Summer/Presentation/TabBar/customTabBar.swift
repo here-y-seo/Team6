@@ -29,6 +29,7 @@ extension customTabBar {
         let nav = UINavigationController(rootViewController: WriteLocationVC())
         let writeVC = nav
         let listVC = ListViewController()
+        let settingVC = UINavigationController(rootViewController: SettingViewController())
         
         homeVC.tabBarItem = UITabBarItem(
         title: "홈",
@@ -45,7 +46,12 @@ extension customTabBar {
             image: UIImage(systemName: "list.bullet.rectangle.portrait"),
             selectedImage: UIImage(systemName: "list.bullet.rectangle.portrait")
         )
+        settingVC.tabBarItem = UITabBarItem(
+            title: "설정",
+            image: UIImage(systemName: "gearshape.2"),
+            selectedImage: UIImage(systemName: "gearshape.2"))
         
-        setViewControllers([homeVC, writeVC, listVC], animated: true)
+        
+        setViewControllers([homeVC, writeVC, listVC, settingVC], animated: true)
     }
 }
